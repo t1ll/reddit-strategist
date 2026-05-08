@@ -1,0 +1,24 @@
+{
+  "name": "reddit-strategist",
+  "description": "Post to Reddit without it tanking. Pick the right sub, write in Reddit voice (not blog voice), pre-flight before submit, and read the thread honestly afterward. 5-phase workflow with anti-AI-slop voice rules and post-mortem analysis.",
+  "version": "0.4.0",
+  "author": {
+    "name": "Till Felippi",
+    "email": "tillmann.felippi@gmail.com"
+  },
+  "homepage": "https://github.com/t1ll/reddit-strategist",
+  "repository": "https://github.com/t1ll/reddit-strategist",
+  "license": "MIT",
+  "skills": "./skills/",
+  "keywords": [
+    "reddit",
+    "subreddit",
+    "marketing",
+    "founder",
+    "indie-hackers",
+    "buildinpublic",
+    "content",
+    "ai-detection",
+    "post-mortem"
+  ]
+}

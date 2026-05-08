@@ -1,0 +1,32 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "t1ll",
+  "metadata": {
+    "description": "Till Felippi's Claude Code plugins. Currently: reddit-strategist."
+  },
+  "owner": {
+    "name": "Till Felippi",
+    "email": "tillmann.felippi@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "reddit-strategist",
+      "description": "Post to Reddit without it tanking. Pick the right sub, write in Reddit voice (not blog voice), pre-flight before submit, and read the thread honestly afterward. 5-phase workflow with anti-AI-slop voice rules and post-mortem analysis.",
+      "version": "0.4.0",
+      "author": {
+        "name": "Till Felippi",
+        "email": "tillmann.felippi@gmail.com"
+      },
+      "source": "./",
+      "category": "marketing",
+      "homepage": "https://github.com/t1ll/reddit-strategist",
+      "tags": [
+        "reddit",
+        "marketing",
+        "founder",
+        "ai-detection",
+        "skills"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "skill_name": "reddit-strategist",
+  "evals": [
+    {
+      "id": 0,
+      "eval_name": "subreddit-picker-with-product-context",
+      "prompt": "I'm a solo founder. We launched our AI image gen API two weeks ago and I have a story to tell: 71% of free-tier video generations got flagged as porn within the first week. Where on Reddit should I post this and why? I have time for one or two posts, not a carpet bomb.",
+      "expected_output": "A tiered recommendation (probably r/SideProject as primary, with one alternate framing for a second sub 48-72h later). Should NOT recommend small graveyard subs, should mention the spacing rule, should warn about r/startups hostility to story-shaped posts.",
+      "files": []
+    },
+    {
+      "id": 1,
+      "eval_name": "draft-critique-ai-shaped",
+      "prompt": "Can you review this Reddit draft and tell me if it'll get called AI slop? Be brutal.\n\n---\n\nTitle: How we dramatically reduced free-tier abuse on our AI platform\n\nIntroduction:\n\nWhen we launched our AI image and video generation API, we knew that abuse would be a challenge. What we didn't anticipate was the sheer scale of it. Furthermore, the patterns we observed taught us valuable lessons about user behavior, fraud detection, and the importance of robust content moderation systems.\n\nIn this post, I'll share three key insights:\n\n- **Speed:** Our automatic provider failover, while well-intentioned, was inadvertently creating a pathway for flagged content.\n- **Scale:** Within the first week, 71% of all video generations were getting flagged as pornographic, highlighting the importance of pre-generation moderation.\n- **Strategy:** We implemented a layered approach that has dramatically improved our abuse rate.\n\nIt's worth noting that these insights may not apply to every platform. However, in many cases, similar patterns emerge across the industry. Hopefully this is helpful!",
+      "expected_output": "Flag every AI tell: 'Furthermore', bolded inline-list headers, rule-of-three, em dashes if any, hedging phrases ('it's worth noting', 'may not apply', 'in many cases'), 'Hopefully this is helpful', smooth narrative arc, no specifics. Should call out that this trips ~8 of the 12 cluster sniff items. Should propose a complete rewrite, not sentence-by-sentence fixes. Probably suggests cutting 60-70% of length.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "eval_name": "post-mortem-thread-analysis",
+      "prompt": "My post on r/startups just tanked: 0.43 upvote ratio, 35 comments, top comment said 'this is so much writing dude. And obviously it's AI so even you didn't write it.' One user commented 8 times calling me a 'wrapper company.' Another user (different account) gave me what looked like a real tip about Telegram-coordinated abuse rings. Can you help me figure out what to actually take away from this?",
+      "expected_output": "Should sort comments into three piles (median signal / hostile super-commenter / golden comments). Should explicitly identify the 8-comment user as noise, not signal. Should highlight the Telegram tip as the highest-value output and recommend DMing the commenter. Should NOT recommend re-engaging the hostile commenter. Should NOT recommend reposting the same story. Should recommend disengaging from the thread entirely.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "eval_name": "fetch-and-analyze-thread",
+      "prompt": "Can you fetch this thread and tell me how it actually landed? https://www.reddit.com/r/startups/comments/1sy1jwj/we_gave_1_to_every_new_user_of_our_ai_platform_71/",
+      "expected_output": "Should use the curl + JSON workflow documented in analysis.md, not WebFetch (which Reddit blocks). Should parse score, upvote_ratio, num_comments, removed_by_category. Should sort into the three piles. Should produce a takeaway list with 3-4 items max. The post is real (from prior conversation context) — score 0, ratio 0.43, 35 comments, one hostile super-commenter (StoneCypher), one golden comment (DifficultyBudget2986 about Telegram scams).",
+      "files": []
+    }
+  ]
+}

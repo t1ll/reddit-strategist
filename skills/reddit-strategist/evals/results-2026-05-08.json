@@ -1,0 +1,171 @@
+{
+  "skill_name": "reddit-strategist",
+  "description": "Use when the user is doing anything Reddit-related: posting to Reddit, picking the right subreddit, drafting a Reddit post, sanity-checking a draft for AI-slop patterns, pre-flighting before submit, analyzing a thread that flopped, deciding whether to reply to a hostile comment, or planning a multi-sub rollout. Five-phase workflow: target sub \u2192 angle \u2192 draft in Reddit voice \u2192 publish pre-flight \u2192 post-mortem analysis. Used \u00e0 la carte; figure out which phase the user needs.",
+  "results": [
+    {
+      "query": "where should I post my story about 71% of our AI video generations getting flagged on reddit? Sub recommendation?",
+      "should_trigger": true,
+      "trigger_rate": 0.5,
+      "triggers": 1,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "i'm thinking about putting this in r/SideProject. it's about our $1 free credit thing and how it got abused. is the title 'I gave every new user $1 on my AI API and 71% of video gens got flagged as porn' too clickbait or just right",
+      "should_trigger": true,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": false
+    },
+    {
+      "query": "ok so my r/SaaS post just bombed. 1 upvote, 12 comments mostly negative. people called it AI slop. can you read the thread and tell me what i should do differently next time? https://www.reddit.com/r/SaaS/comments/abc123/...",
+      "should_trigger": true,
+      "trigger_rate": 0.5,
+      "triggers": 1,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "Can you review this draft I'm about to post? Title is 'How we cut free-trial abuse by 80% with a 3-layer filter stack' and I want to know if it sounds AI-written before I hit submit",
+      "should_trigger": true,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": false
+    },
+    {
+      "query": "trying to do build-in-public this week. should I post a metrics update to r/buildinpublic or r/scaleinpublic? we just hit $4.2K MRR. what's a good format for those subs",
+      "should_trigger": true,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": false
+    },
+    {
+      "query": "i posted to r/startups yesterday and it tanked. like really tanked. the comments are brutal. 0.43 upvote ratio. one guy keeps replying calling me a wrapper. what now",
+      "should_trigger": true,
+      "trigger_rate": 0.5,
+      "triggers": 1,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "can you fetch this reddit thread for me and summarize what people actually said? https://reddit.com/r/programming/comments/xyz...",
+      "should_trigger": true,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": false
+    },
+    {
+      "query": "I'm going to do a Reddit promotion sprint over the next 2 weeks for my open source project. What's a sequencing plan that won't get me shadowbanned? I'm thinking r/programming, r/opensource, r/golang, maybe HN",
+      "should_trigger": true,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": false
+    },
+    {
+      "query": "this is the post i wrote for my new AI platform launch \u2014 does it sound human enough? I'm worried people will think ChatGPT wrote it because i used it as a drafting tool",
+      "should_trigger": true,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": false
+    },
+    {
+      "query": "someone in my reddit thread just posted what looks like a really useful comment about how to detect coordinated abuse. should I reply publicly or DM them? what should I say",
+      "should_trigger": true,
+      "trigger_rate": 0.5,
+      "triggers": 1,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "help me write a LinkedIn post about our launch \u2014 i want it to sound thought-leader-y without being too cringe",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "can you draft an X thread (8-10 tweets) about the 71% abuse story? assume the audience is AI-twitter / dev-twitter",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "review the copy on our pricing page \u2014 i think it's too long and the value prop isn't clear in the first scroll",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "i need to set up a discord server for our community. what channels should I have on day 1, and how do i seed early activity",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "write a cold email to a potential enterprise customer at a Swiss bank \u2014 they viewed our demo page twice but never signed up. soft tone, asking what we got wrong",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "I want to add a new model called 'sora-2-pro' to our platform \u2014 image and video, $0.05 per generation. walk me through the registry changes needed",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "we're getting some traction on Hacker News \u2014 i posted there an hour ago. what should i do to keep the momentum going? do i reply to comments or stay quiet",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "my ProductHunt launch is in 3 days. give me the 24h pre-launch checklist",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "can you help me debug why my CSP header is blocking the embedded reddit thread iframe on my blog post page? the console shows 'frame-src' violation",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    },
+    {
+      "query": "I want to humanize this article before publishing it on my blog: [pasted content]. it's not for reddit, just my personal site",
+      "should_trigger": false,
+      "trigger_rate": 0.0,
+      "triggers": 0,
+      "runs": 2,
+      "pass": true
+    }
+  ],
+  "summary": {
+    "total": 20,
+    "passed": 14,
+    "failed": 6
+  }
+}
