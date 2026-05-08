@@ -1,20 +1,7 @@
 ```
-
-
-                            \   |   /
-                             \  |  /
-                              \ | /
-                ───────────────  *  ───────────────
-                              / | \
-                             /  |  \
-                            /   |   \
-
-
-                  r e d d i t  ·  s t r a t e g i s t
-
-                a Claude Code skill for posting fearlessly
-
-
+\ | /
+──*──     reddit · strategist
+/ | \     a Claude Code skill for posting fearlessly
 ```
 
 A skill for posting to Reddit without it tanking. Or getting called AI slop. Or burning a one-shot story.
