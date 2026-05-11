@@ -18,6 +18,16 @@ description: |
   "should I reply to this comment," "read this Reddit thread," "fetch this
   thread," "post mortem," "build in public update," or any reddit.com URL.
 
+  Also force-invoke for "write like X" style requests where X is a named
+  essayist or blogger: "write like Paul Graham," "channel patio11," "Patrick
+  McKenzie voice," "make this read like Wait But Why," "Tim Urban style,"
+  "give it the Housel treatment," "Morgan Housel one-sentence-paragraph
+  voice," "Stratechery-style," "Ben Thompson framework essay," "rewrite my
+  Reddit post as a PG essay," "convert this to a Stratechery piece." This is
+  for cross-platform repurposing only (blog, Substack, HN, LinkedIn long-form
+  article) — not for native Reddit posts, where these voices will be flagged
+  as AI slop. See `references/voices.md`.
+
   Reddit needs specialized knowledge Claude does not reliably have by default:
   sub-specific tier rankings and unwritten rules, anti-AI-detection voice patterns
   (length-plus-polish trauma, rule-of-three, bolded-list reflex), the
@@ -110,6 +120,25 @@ When invoked, figure out from the user's message which phase(s) they need help w
 
 If the user comes in with multiple phases at once ("help me find a sub and draft a post"), walk them through in order but check in after each phase before moving on — don't deliver a 3000-word soup.
 
+## Slash commands available
+
+The plugin ships four slash commands. Most of the time the user reaches the skill via auto-trigger or `/reddit-strategist`, but the specific commands are useful when the user is doing exactly the thing they describe.
+
+| Command | Phase | When to suggest it |
+|---|---|---|
+| `/reddit-strategist` | generic | Auto-triggered or user typed the slash. No special handling needed. |
+| `/reddit-analyze <url>` | Phase 5 | User wants to analyze a thread and has a URL. The command takes the URL as an argument and skips the ask-for-URL step. |
+| `/reddit-slop` | Phase 3 | User pastes a draft asking "does this sound AI?" The command runs voice review only, no full rewrite unless requested. |
+| `/write-like <author>` | force-invoke voices | User wants to channel a specific essayist for cross-platform repurposing. Recognized author aliases: `pg`, `paul-graham`, `patio11`, `patrick-mckenzie`, `housel`, `morgan-housel`, `tim-urban`, `wbw`, `wait-but-why`, `ben-thompson`, `stratechery`. Or `/write-like ask` for the ask-with-recommendation flow. |
+
+**Discoverability hint:** when the user goes through a flow that has a dedicated command, mention it once at the end so they know about it for next time. One line, not a lecture. Examples:
+
+- After analyzing a thread the user pasted by hand: "Next time you can run this directly with `/reddit-analyze <url>`."
+- After voice-reviewing a draft: "If you just want the slop check on a future draft, `/reddit-slop` runs only that phase."
+- After producing a Paul Graham rewrite: "`/write-like pg` next time skips this whole intro."
+
+Don't suggest a command they already used. Don't suggest commands when the conversation is in the middle of a phase; wait until the natural end. Don't suggest more than one per response.
+
 ## Force-invoke: cross-platform repurposing
 
 The skill auto-triggers only on Reddit work, but the voice rules in `references/voice.md` (drop the rule-of-three, kill summary statements, replace polish with raw specifics, refuse the bolded-list reflex) transfer well to other channels. AI-detection allergies on X/Twitter and the dev side of LinkedIn are similar to Reddit's, just less aggressive.
@@ -123,6 +152,31 @@ A concrete example of why this matters: in early 2026, X launched a $1M monthly 
 If the user is repurposing a *flopped* Reddit post, run the post-mortem first (Phase 5) so the rewrite addresses why it tanked, not just where it goes next. A post that flopped because the angle was wrong won't fix itself by changing platforms.
 
 If the destination needs a cover image (most articles, blog posts, Substack, LinkedIn carousel slide 1), generate a copy-pasteable image prompt using the template in `cross-platform.md` and recommend GPT Image 2 (best for text overlay) or Nano Banana Pro (best for max resolution and brand consistency). If the user asks where to run the prompt, suggest lumenfall.ai or fal.ai.
+
+## Force-invoke: write like X
+
+When the user explicitly asks to write in the voice of a named author — Paul Graham, Patrick McKenzie (patio11), Morgan Housel, Tim Urban (Wait But Why), or Ben Thompson (Stratechery) — load `references/voices.md` and apply the relevant profile.
+
+Each profile is a ~500-word distillation built from reading 10+ of the author's actual articles: voice summary, 8-12 concrete rules, the distinctive tics, vocabulary preferences, three before/after transformations, and an explicit "when NOT to use this voice" list. Read the profile end-to-end before drafting — the anti-context list is where most mistakes get caught.
+
+Hard prereqs (these are in `voices.md` but repeat them here so they don't get skipped):
+
+- **Confirm the destination isn't Reddit.** All five of these are essay voices. Paul Graham on r/SideProject gets called AI slop within ten minutes. If the user wants to "write like PG" *for a Reddit post*, refuse and explain — point them at `references/voice.md` instead. The exception is the user explicitly publishing the piece elsewhere (blog, Substack, HN, LinkedIn long-form, X article) and using Reddit only as the source material.
+- **Diagnose the substance first.** "Write like X" is a coat of paint, not a thesis generator. If the underlying claim is weak, an author voice will make it more conspicuously weak. Run the post-mortem (Phase 5) on a flopped Reddit post before applying a voice to the rewrite.
+- **Pick one voice and commit.** Don't blend two. Each profile has a coherent internal logic; blending produces a third voice that reads as nothing in particular.
+- **Respect the length floor.** PG ≥600w, patio11 ≥1200w, Housel ≥400w, Urban ≥800w, Thompson ≥1500w. Below the floor, the tells don't have room to land. If the user wants something shorter, recommend a different voice or a different format — don't compress.
+
+**If the user hasn't named a specific author, STOP and ask — but ask with an opinionated recommendation.** Phrases like "rewrite this like a real author," "make it sound like a good writer," "channel someone good," "give it a proper voice" do not authorize you to silently pick one. Which author to channel is a creative choice the user cares about.
+
+The question they want is *not* "here are five names, which?" — it's a recommendation with the elimination reasoning attached. Read the substance and destination carefully, pick the one you'd commit to, and then explain in one line each *why the other four would mishandle this specific draft*. Be specific to what's in their text, not generic. The elimination is the load-bearing part — it earns the user's trust in the recommendation and lets them override on informed grounds. The full template and a worked example are at the top of `references/voices.md`.
+
+Use `AskUserQuestion` if available, with the recommendation + eliminations in the question text and the five authors as single-select options. Otherwise ask in chat. Do not start drafting until they pick, or explicitly tell you to go with your recommendation.
+
+Also watch for ambiguous destination phrasings: "rewrite this for x" can mean X-the-platform (Twitter/X) or X-the-placeholder. If the user wrote a bare "for x" / "for X" without context, ask which they meant before proceeding.
+
+Apply in this order when rewriting an existing draft: structural surgery → sentence rhythm → vocabulary swap → tells pass → re-check the "when NOT to use" list → **de-slop pass**. The de-slop pass is non-negotiable and is the difference between "sounds like the author" and "fools a hostile reader." The voice rules operate at sentence level; AI prose patterns reassert themselves at *essay* level — the three-takeaway closer with bolded headers, the neat setup-tension-resolution-moral arc, the "what this is really about" wrap-up, the both-sides hedge in the conclusion. None of the five authors do any of these. The full de-slop checklist (universal patterns + per-author anti-patterns) is in `references/voices.md` under "The de-slop pass."
+
+Hand the user the new draft with a one-line note on what changed structurally — not a bullet-list changelog.
 
 ## Working style
 
