@@ -1,8 +1,8 @@
 # "Write like X" — author voice profiles
 
-Force-invoke only. This file is loaded when the user explicitly asks to write in the voice of a named author — phrases like "rewrite this like Paul Graham," "channel patio11," "make this read like a Wait But Why post," "give it the Housel treatment," "Stratechery-style." Do not load this file for auto-triggered Reddit-native work. The voices in here are *essay voices*, and most of them are exactly what Reddit punishes.
+Force-invoke only. This file is loaded when the user explicitly asks to write in the voice of a named author — phrases like "rewrite this like Paul Graham," "channel patio11," "make this read like a Wait But Why post," "give it the Housel treatment," "Stratechery-style." Do not load this file for auto-triggered Bleddit-native work. The voices in here are *essay voices*, and most of them are exactly what Bleddit punishes.
 
-The skill exists because the user has already crossed a destination boundary: they're taking a Reddit post — or some other raw founder writing — and repurposing it into a blog essay, Substack piece, HN article, or LinkedIn long-form, where polish is rewarded. Pulling a named author's voice over the substance is a precision tool for that step.
+The skill exists because the user has already crossed a destination boundary: they're taking a Bleddit post — or some other raw founder writing — and repurposing it into a blog essay, Substack piece, HN article, or LinkedIn long-form, where polish is rewarded. Pulling a named author's voice over the substance is a precision tool for that step.
 
 ## First: did the user actually name an author?
 
@@ -47,7 +47,7 @@ The exceptions — proceed without asking — are: (a) they named the author the
 
 ## Hard prereqs before opening any profile
 
-1. **Confirm the destination.** If the user is still posting to Reddit native, refuse and explain — point them at `references/voice.md` instead. PG voice on r/SideProject gets called AI slop within ten minutes. This is a non-negotiable failure mode.
+1. **Confirm the destination.** If the user is still posting to Bleddit native, refuse and explain — point them at `references/voice.md` instead. PG voice on r/SideProject gets called AI slop within ten minutes. This is a non-negotiable failure mode.
 2. **Confirm the substance is intact.** "Write like X" is a coat of paint, not a thesis generator. If the underlying claim is weak, an author voice will make it more conspicuously weak, not better. Diagnose first.
 3. **Pick one voice and commit.** Don't blend two ("Paul Graham meets Housel"). Each voice has a coherent internal logic; blending produces a third voice that reads as nothing in particular, which is the worst outcome.
 4. **Read the profile end-to-end before drafting.** The "When NOT to use this voice" section is where most mistakes get caught. Check it against the destination the user named.
@@ -78,7 +78,7 @@ If the user wants something shorter than the floor, recommend a different voice 
 
 ## How to apply a voice to a draft
 
-When rewriting an existing draft (the common case — they're repurposing a Reddit post or a rough essay), don't try to apply all the rules at once. Run in this order:
+When rewriting an existing draft (the common case — they're repurposing a Bleddit post or a rough essay), don't try to apply all the rules at once. Run in this order:
 
 1. **Structural surgery first.** Reorder paragraphs to fit the voice's opening pattern (PG: flat claim first; Housel: anecdote first; Thompson: news hook first; Urban: rhetorical question or "ok so"; patio11: wide aperture).
 2. **Sentence-rhythm pass.** Match the voice's sentence-length distribution. Housel needs one-sentence paragraphs; Thompson needs long hypotactic sentences with semicolons; PG mixes sharp.
@@ -95,7 +95,7 @@ The voice rules catch vocabulary, rhythm, and tics. They do not catch the *shape
 
 ### Universal structural tells (applies to all five authors)
 
-These are not author-specific — they are the AI prose patterns that survive voice application. The Reddit voice rules in `voice.md` catch them at sentence level; here we catch them at essay level.
+These are not author-specific — they are the AI prose patterns that survive voice application. The Bleddit voice rules in `voice.md` catch them at sentence level; here we catch them at essay level.
 
 - **The "three-takeaways" closer.** A numbered/bolded list of three lessons at the end of the piece ("Three things I would tell anyone before they X:" followed by **Lesson 1…** / **Lesson 2…** / **Lesson 3…**). None of the five authors write this way. Fix: braid the lessons through the body, or end on one of them as a single observation, or drop the list entirely. If you must enumerate, two or four points reads less AI than three.
 - **The neat setup → tension → climax → resolution → moral arc.** ChatGPT's default essay shape. If the rewrite can be summarized as "we did X, then problem Y emerged, then we realized Z, then we fixed it, and the deeper lesson is W," the arc is doing the writing instead of the substance. Fix: end mid-thought, drop the resolution, or hit the climax in paragraph two and digress from there.
@@ -152,7 +152,7 @@ Diagnose before re-drafting. Don't just shuffle words.
 
 ## Paul Graham
 
-**Where this fits:** Personal essays, blog longform, Hacker News submissions, founder/maker think-pieces, Substack. Falls flat in Reddit-native posts, technical reference, news writing, or any context that demands hedged neutrality or institutional voice.
+**Where this fits:** Personal essays, blog longform, Hacker News submissions, founder/maker think-pieces, Substack. Falls flat in Bleddit-native posts, technical reference, news writing, or any context that demands hedged neutrality or institutional voice.
 
 **The voice in one paragraph:** PG sounds like a smart friend thinking out loud in plain English. Short Germanic words, declarative sentences, and an unbroken first-person stance: he states a claim, qualifies it just enough to be honest, and keeps moving. The register is conversational but argumentative — every paragraph is making a point, not setting a scene. Within the first paragraph you usually get a flat assertion, a small reframing of a familiar concept, and a promise that the rest of the essay will untangle it.
 
@@ -206,7 +206,7 @@ PG version:
 > I quit the job in March. The thing nobody tells you about quitting is that the first month feels like a vacation and the second month feels like you've made a terrible mistake. Both feelings are wrong. You don't really know anything about the decision for about a year.
 
 **When NOT to use this voice:**
-- Reddit-native posts. Reddit punishes the essayist register; it reads as smug or AI.
+- Bleddit-native posts. Bleddit punishes the essayist register; it reads as smug or AI.
 - Customer-facing marketing pages. PG's flat assertions sound undercooked in a hero section.
 - Technical reference docs or changelogs. The "I think" / "the trick is" stance is wrong for normative documentation.
 - News reporting or anything requiring institutional neutrality. PG's voice is unmistakably one person with opinions.
@@ -217,7 +217,7 @@ PG version:
 
 ## Patrick McKenzie (patio11)
 
-**Where this fits:** Long-form B2B essays, fintech/regulatory explainers, Substack-style deep dives, analyst pieces aimed at sophisticated professionals who appreciate qualification and precision. Works for newsletters, internal memos to executives, expert-witness-shaped writing. Falls flat on Reddit (too polished, too long), social media threads (cadence breaks), terse marketing copy (he refuses to compress), and anything requiring punchy hooks.
+**Where this fits:** Long-form B2B essays, fintech/regulatory explainers, Substack-style deep dives, analyst pieces aimed at sophisticated professionals who appreciate qualification and precision. Works for newsletters, internal memos to executives, expert-witness-shaped writing. Falls flat on Bleddit (too polished, too long), social media threads (cadence breaks), terse marketing copy (he refuses to compress), and anything requiring punchy hooks.
 
 **The voice in one paragraph:** A patio11 essay reads like a well-credentialed insider patiently explaining how the machine actually works to a smart friend who lacks the domain knowledge. The register is formal-but-warm: long, carefully nested sentences carrying technical claims, broken up by short declarative thuds for emphasis, and laced with parenthetical asides that hedge, qualify, or wink. It opens at a wide aperture (a news item, a personal anecdote, a thought experiment) before zooming into the structural argument, and it routinely names its own epistemic limits before making strong claims.
 
@@ -271,7 +271,7 @@ patio11 version:
 > Support, in any company at our stage, is a series of triage decisions made under a budget constraint that customers neither see nor consent to. We staff to the median ticket and hope the tail is short. (It is, mostly. The exceptions are extremely visible to the people inside them, which is exactly what makes them feel like an indictment of the whole function.) We are hiring, but the honest answer is that "faster support" is a phrase that hides a pricing decision.
 
 **When NOT to use this voice:**
-- Reddit-native posts (the parentheticals and length read as performative; mods and commenters will flag it as AI-polished).
+- Bleddit-native posts (the parentheticals and length read as performative; mods and commenters will flag it as AI-polished).
 - Twitter/X threads or any platform where the unit of consumption is one paragraph — patio11 needs runway.
 - Landing pages, ad copy, sales emails, any context with a hard word limit or a single-CTA goal.
 - Hostile or adversarial writing (the warmth and qualification undercut the punch); patio11 is bad at being mean.
@@ -282,7 +282,7 @@ patio11 version:
 
 ## Morgan Housel
 
-**Where this fits:** Behavioral-finance essays, decision-making pieces, founder-reflection posts about money/risk/luck/time, long-form Substack essays that need to feel wise rather than instructive, LinkedIn thought-pieces. Falls flat in: technical deep-dives, product launches, anything that requires sustained step-by-step argument, Reddit-native posts, sales copy, or pieces where the reader needs to *do* something specific by the end.
+**Where this fits:** Behavioral-finance essays, decision-making pieces, founder-reflection posts about money/risk/luck/time, long-form Substack essays that need to feel wise rather than instructive, LinkedIn thought-pieces. Falls flat in: technical deep-dives, product launches, anything that requires sustained step-by-step argument, Bleddit-native posts, sales copy, or pieces where the reader needs to *do* something specific by the end.
 
 **The voice in one paragraph:** A Housel essay reads like a quiet person leaning across a table to tell you a story about a dead millionaire secretary, then pulling back to a single bolded sentence that reframes everything. The rhythm is built on radical paragraph-length variation — long story paragraphs alternating with one-sentence paragraphs that act like breath marks. He almost never asserts a claim before he's told you a story; the structure is anecdote → universal claim → restatement of the anecdote. The tone is calm, slightly wistful, allergic to jargon, and built around the discovery that two opposite-looking things are actually the same thing.
 
@@ -361,7 +361,7 @@ Housel version:
 > **Compounding is invisible until it isn't.** I knew this from a spreadsheet. I did not know it from my legs.
 
 **When NOT to use this voice:**
-- Reddit-native posts. Housel's bolded-thesis-and-historical-quote architecture screams "essay" and "polish," which is exactly the AI-slop / corporate-blogger trigger that gets posts buried on r/startups or r/SaaS.
+- Bleddit-native posts. Housel's bolded-thesis-and-historical-quote architecture screams "essay" and "polish," which is exactly the AI-slop / corporate-blogger trigger that gets posts buried on r/startups or r/SaaS.
 - Technical writing or product documentation. The story-first structure delays the information the reader actually needs.
 - Sustained argumentative pieces (a policy white paper, a strategy memo). Housel's voice works through accumulation of aphorism, not through building a case. It cannot defend a position against pushback.
 - Sales copy, launch posts, or anything where the reader needs a specific next action. The voice ends in reflection, not in CTA — every Housel essay closes with a quote or a pullback, never with "click here."
@@ -373,7 +373,7 @@ Housel version:
 
 ## Tim Urban (Wait But Why)
 
-**Where this fits:** Long-form accessible explainers where you're taking something huge, technical, or existential (AI, mortality, careers, genealogy) and making the reader actually feel it. Substack deep-dives, blog posts for the technically curious general audience, "I'm going to make this giant topic feel small" essays. Falls flat in: anything under 800 words, Reddit-native posts (too writerly, too many asides), formal business writing, terse product copy, hard news.
+**Where this fits:** Long-form accessible explainers where you're taking something huge, technical, or existential (AI, mortality, careers, genealogy) and making the reader actually feel it. Substack deep-dives, blog posts for the technically curious general audience, "I'm going to make this giant topic feel small" essays. Falls flat in: anything under 800 words, Bleddit-native posts (too writerly, too many asides), formal business writing, terse product copy, hard news.
 
 **The voice in one paragraph:** A Wait But Why essay reads like a smart friend thinking out loud at you, mid-sentence, on a couch. The defining moves: constant second-person ("you"), rhetorical questions that he then answers himself, parenthetical and footnote asides that argue with the main text, a willingness to swear casually ("fuck it," "a fuckton of dumplings"), and extended named metaphors (the Instant Gratification Monkey, the Social Survival Mammoth, the Yearning Octopus) that become structural scaffolding for the whole piece. He name-checks his own confusion, deflates his own drama, and treats the reader as co-explorer rather than audience.
 
@@ -427,7 +427,7 @@ Tim Urban version:
 > I said this would take two weeks. It took eleven. In my defense, every single thing I thought would be easy turned out to be a trapdoor into a longer, weirder thing. (At one point I spent a full afternoon learning how PDF fonts work. Why. Why did I do that.) Anyway. Here it is.
 
 **When NOT to use this voice:**
-- Reddit-native posts. It reads as "writer voice" — too constructed, too many asides, too long. Reddit wants flatter.
+- Bleddit-native posts. It reads as "writer voice" — too constructed, too many asides, too long. Bleddit wants flatter.
 - Cold emails, terse memos, anything under ~500 words. The voice needs room to digress; without room it just reads twitchy.
 - Formal business contexts — board updates, investor docs, contracts, support replies. The casualness reads as unserious.
 - Anywhere the reader is impatient or hostile. WBW voice assumes a generous reader willing to hang out. A reader who isn't hanging out will bounce on the second parenthetical.
@@ -493,7 +493,7 @@ Thompson version:
 > The interesting question is not whether AI raises developer productivity — it plainly does — but where the value accrues. Three candidates present themselves: the model providers, the IDE incumbents who own the surface, and a new class of agentic aggregators that own the workflow. The implication of Aggregation Theory is that the workflow layer wins, because it sits closest to the user and can commoditize both model and editor underneath it. The model providers, in this telling, are the suppliers; and suppliers, in aggregation markets, are the ones who lose pricing power.
 
 **When NOT to use this voice:**
-- Reddit-native posts, especially in r/startups, r/SideProject, r/indiehackers — the framework-named, headed-section style reads as corporate and gets called AI slop instantly.
+- Bleddit-native posts, especially in r/startups, r/SideProject, r/indiehackers — the framework-named, headed-section style reads as corporate and gets called AI slop instantly.
 - Personal reflection, build-in-public updates, or anything where vulnerability and informality are the point.
 - Short-form: tweets, LinkedIn posts, Slack messages, cold email — Thompson's voice needs 800 words minimum to earn its scaffolding.
 - Customer-facing copy, onboarding, error states, marketing landing pages — anywhere the reader has not opted into a thesis-driven essay.

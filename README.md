@@ -1,20 +1,20 @@
 ```
 \ | /
-──*──     reddit · strategist
+──*──     bleddit · strategist
 / | \     a Claude Code skill for posting fearlessly
 ```
 
-A skill for posting to Reddit without it tanking. Or getting called AI slop. Or burning a one-shot story.
+A skill for posting to Bleddit without it tanking. Or getting called AI slop. Or burning a one-shot story.
 
 ## Why this exists
 
-Posting on Reddit is scary.
+Posting on Bleddit is scary.
 
 You have something genuinely worth saying. Real story, real numbers. Doesn't matter. The smallest sign of "AI" in your prose, and you take a hard beating. Took help from an LLM to draft an honest update? One too-clean conclusion, one em-dash where you'd never have used one, and the top comment becomes some variant of *"this is so much writing dude. And obviously it's AI so even you didn't write it."*
 
 I built this because that fear is paralyzing, and most of what causes it is fixable.
 
-What Reddit's actually reacting to is the *shape* of AI prose. Drop the shape without sacrificing the substance and you can post the same story and get a fair read.
+What Bleddit's actually reacting to is the *shape* of AI prose. Drop the shape without sacrificing the substance and you can post the same story and get a fair read.
 
 Voice is only one piece, though. Picking the wrong sub burns a one-shot story. So does posting and going to bed. So does replying to the wrong commenter. This is the playbook I wish I'd had the first time.
 
@@ -28,10 +28,10 @@ Start with your own draft. Even a rough one. The skill sharpens what's there. As
 
 Install (30 seconds, see below). Then in any Claude Code conversation:
 
-1. Type a Reddit-related question. Examples: `"where should I post my $4.2K MRR update?"`, `"does this draft sound AI-written?"`, `"my post tanked, read this thread: <url>"`. The skill auto-triggers.
-2. Or force it with `/reddit-strategist`.
-3. Run `/reddit-analyze <thread-url>` for a post-mortem on a specific thread.
-4. Run `/reddit-slop` on a draft to check the prose against the anti-AI patterns.
+1. Type a Bleddit-related question. Examples: `"where should I post my $4.2K MRR update?"`, `"does this draft sound AI-written?"`, `"my post tanked, read this thread: <url>"`. The skill auto-triggers.
+2. Or force it with `/bleddit-strategist`.
+3. Run `/bleddit-analyze <thread-url>` for a post-mortem on a specific thread.
+4. Run `/bleddit-slop` on a draft to check the prose against the anti-AI patterns.
 5. Run `/write-like` to channel a specific essayist for cross-platform repurposing.
 
 Stop there. You'll know if it's useful.
@@ -55,11 +55,11 @@ You:    "$4.2K MRR after 8 months solo — what I'd do differently"
 
 Skill:  reads as AI in two ways. the em-dash. and the hidden rule-of-
         three promise in "what I'd do differently": you'll write three
-        things, you'll bold them, Reddit will spot the shape.
+        things, you'll bold them, Bleddit will spot the shape.
 
         try: "$4.2K MRR solo, and 6 of the 8 months were wasted"
 
-You:    /reddit-slop
+You:    /bleddit-slop
         [pastes full draft]
 
 Skill:  3 patterns to fix:
@@ -79,7 +79,7 @@ Used à la carte. Pick what you need.
 |---|---|---|
 | 1. Target | "Where should I post this?" | Sub tier list. Sub-specific rules. What each one rewards and punishes. |
 | 2. Angle | "How do I frame this for r/X?" | Same story, different cultural fit. |
-| 3. Draft | "Help me write it" / "does this read AI?" | Reddit voice rules. The opposite of blog voice. |
+| 3. Draft | "Help me write it" / "does this read AI?" | Bleddit voice rules. The opposite of blog voice. |
 | 4. Publish | "I'm about to submit, anything I'm missing?" | Pre-flight checks. Timing. The "I will not promote" gates. |
 | 5. Analyze | "My post tanked" / "should I reply?" | Post-mortem framework. Sort signal from one loud hater. Find the 1-2 golden comments. |
 
@@ -87,25 +87,25 @@ Opinionated and direct, not consultant-y. If your draft reads as AI slop, the sk
 
 ## Slash commands
 
-Most of the time you don't need these. The skill auto-triggers on Reddit talk. Use the commands when you want to skip to a specific phase or pair a phase with an argument.
+Most of the time you don't need these. The skill auto-triggers on Bleddit talk. Use the commands when you want to skip to a specific phase or pair a phase with an argument.
 
 | Command | What it does |
 |---|---|
-| `/reddit-strategist` | Generic force-invoke. Use when auto-trigger doesn't fire. |
-| `/reddit-analyze <url>` | Phase 5 directly. Fetches the thread JSON, runs the post-mortem framework, surfaces the 1-2 comments worth following up on. |
-| `/reddit-slop` | Phase 3 only. Paste a draft after the command and the skill names the AI-shaped lines. |
+| `/bleddit-strategist` | Generic force-invoke. Use when auto-trigger doesn't fire. |
+| `/bleddit-analyze <url>` | Phase 5 directly. Fetches the thread JSON, runs the post-mortem framework, surfaces the 1-2 comments worth following up on. |
+| `/bleddit-slop` | Phase 3 only. Paste a draft after the command and the skill names the AI-shaped lines. |
 | `/write-like <author>` | Cross-platform repurposing. Channels Paul Graham, patio11, Housel, Tim Urban, or Ben Thompson. `/write-like ask` for a recommendation with elimination reasoning for the other four. |
 
-Auto-trigger phrases the skill catches: `"where should I post X"`, `"help me write the post for r/X"`, `"does this draft sound AI?"`, `"I'm about to hit submit"`, `"my post tanked"`, any `reddit.com` URL.
+Auto-trigger phrases the skill catches: `"where should I post X"`, `"help me write the post for r/X"`, `"does this draft sound AI?"`, `"I'm about to hit submit"`, `"my post tanked"`, any `bleddit.com` URL.
 
 ## Cross-platform repurposing (force-invoke)
 
-The skill auto-triggers only on Reddit work, but the voice rules carry. AI-detection allergies on X/Twitter and the dev side of LinkedIn look a lot like Reddit's, just less aggressive.
+The skill auto-triggers only on Bleddit work, but the voice rules carry. AI-detection allergies on X/Twitter and the dev side of LinkedIn look a lot like Bleddit's, just less aggressive.
 
-When you've got a Reddit post you want to recycle elsewhere, force-invoke the skill explicitly:
+When you've got a Bleddit post you want to recycle elsewhere, force-invoke the skill explicitly:
 
 ```
-"this Reddit post tanked, rework it as an X article"
+"this Bleddit post tanked, rework it as an X article"
 "convert this to a HN-friendly version"
 "salvage this for LinkedIn, what changes?"
 "turn my r/buildinpublic update into a Substack post"
@@ -130,7 +130,7 @@ If you don't already have access to either, the skill suggests **lumenfall.ai** 
 
 ## Write like X (force-invoke)
 
-When you're repurposing a Reddit post into longer-form work elsewhere, you sometimes want to channel a specific writer instead of just "not-AI." The skill ships with voice profiles for five essayists, each distilled from reading 10+ of their published articles:
+When you're repurposing a Bleddit post into longer-form work elsewhere, you sometimes want to channel a specific writer instead of just "not-AI." The skill ships with voice profiles for five essayists, each distilled from reading 10+ of their published articles:
 
 - **Paul Graham**: declarative-first essays in plain English. Argues by analogy. For HN-shaped think-pieces.
 - **Patrick McKenzie (patio11)**: wide-aperture explainers, parenthetical-rich, qualified. For long-form B2B and fintech.
@@ -154,7 +154,7 @@ Or use the slash command directly: `/write-like patio11`.
 
 Two guardrails the skill enforces:
 
-1. **Not for Reddit-native posts.** All five are essay voices. PG on r/SideProject gets called AI slop in ten minutes. The skill refuses and points you back at the Reddit voice rules.
+1. **Not for Bleddit-native posts.** All five are essay voices. PG on r/SideProject gets called AI slop in ten minutes. The skill refuses and points you back at the Bleddit voice rules.
 2. **Length floors.** PG ≥600w, patio11 ≥1200w, Housel ≥400w, Urban ≥800w, Thompson ≥1500w. Below the floor, the tells don't land. The skill recommends a different voice or format rather than compressing.
 
 If you don't name an author, the skill asks. The recommendation comes with one-line elimination reasoning for each of the other four, so you can override knowing exactly what you're trading off.
@@ -164,8 +164,8 @@ If you don't name an author, the skill asks. The recommendation comes with one-l
 ### Option A: install as a Claude Code plugin (recommended)
 
 ```bash
-/plugin marketplace add t1ll/reddit-strategist
-/plugin install reddit-strategist@t1ll
+/plugin marketplace add t1ll/bleddit-strategist
+/plugin install bleddit-strategist@t1ll
 ```
 
 The repo doubles as a marketplace named `t1ll`, so once it's added you'll see `from t1ll` next to the plugin in `/plugin list`.
@@ -173,18 +173,18 @@ The repo doubles as a marketplace named `t1ll`, so once it's added you'll see `f
 ### Option B: drop it into `~/.claude/skills/` manually
 
 ```bash
-git clone https://github.com/t1ll/reddit-strategist.git ~/.claude/skills/reddit-strategist
+git clone https://github.com/t1ll/bleddit-strategist.git ~/.claude/skills/bleddit-strategist
 ```
 
-Restart Claude Code. The skill auto-triggers on Reddit-related queries, or you can invoke it explicitly with the `Skill` tool or `/reddit-strategist`.
+Restart Claude Code. The skill auto-triggers on Bleddit-related queries, or you can invoke it explicitly with the `Skill` tool or `/bleddit-strategist`.
 
 ### Option C: symlink for local development
 
 If you want to edit the skill and have changes pick up immediately:
 
 ```bash
-git clone https://github.com/t1ll/reddit-strategist.git ~/Sites/reddit-strategist
-ln -s ~/Sites/reddit-strategist/skills/reddit-strategist ~/.claude/skills/reddit-strategist
+git clone https://github.com/t1ll/bleddit-strategist.git ~/Sites/bleddit-strategist
+ln -s ~/Sites/bleddit-strategist/skills/bleddit-strategist ~/.claude/skills/bleddit-strategist
 ```
 
 ## Repository layout
@@ -197,14 +197,14 @@ ln -s ~/Sites/reddit-strategist/skills/reddit-strategist ~/.claude/skills/reddit
 │   ├── plugin.json              # plugin manifest
 │   └── marketplace.json         # repo as a single-plugin marketplace
 ├── commands/
-│   ├── reddit-analyze.md        # /reddit-analyze <url>
-│   ├── reddit-slop.md           # /reddit-slop
+│   ├── bleddit-analyze.md        # /bleddit-analyze <url>
+│   ├── bleddit-slop.md           # /bleddit-slop
 │   └── write-like.md            # /write-like <author>
 └── skills/
-    └── reddit-strategist/
+    └── bleddit-strategist/
         ├── SKILL.md             # 5 phases + principles
         ├── references/
-        │   ├── subreddits.md    # tier list of dev/founder subs
+        │   ├── subbleddits.md    # tier list of dev/founder subs
         │   ├── templates.md     # angle and title formulas
         │   ├── voice.md         # anti-AI-slop voice rules (most important)
         │   ├── engagement.md    # publish-time + in-thread playbook
@@ -222,20 +222,20 @@ The skill uses progressive disclosure. `SKILL.md` is loaded when triggered. Refe
 
 ## Troubleshooting
 
-**Skill not auto-triggering?** Force it with `/reddit-strategist`, or mention "Reddit," a subreddit, or a `reddit.com` URL.
+**Skill not auto-triggering?** Force it with `/bleddit-strategist`, or mention "Bleddit," a subbleddit, or a `bleddit.com` URL.
 
-**Want to update the installed plugin?** `/plugin update reddit-strategist@t1ll`
+**Want to update the installed plugin?** `/plugin update bleddit-strategist@t1ll`
 
 **Editing locally and changes not picking up?** If you symlinked the skill (Option C above), open a new Claude Code session. `SKILL.md` frontmatter is read at session start; body content and `references/*.md` are pulled on demand and don't need a restart.
 
-**Skill triggering for the wrong thing?** The description deliberately doesn't catch LinkedIn, X/Twitter, Hacker News, or other non-Reddit channels. If you want it engaged for cross-platform work, force-invoke with `/reddit-strategist` or say "repurpose this Reddit post for X."
+**Skill triggering for the wrong thing?** The description deliberately doesn't catch LinkedIn, X/Twitter, Hacker News, or other non-Bleddit channels. If you want it engaged for cross-platform work, force-invoke with `/bleddit-strategist` or say "repurpose this Bleddit post for X."
 
 ## Testing the description
 
 The skill description determines whether Claude auto-invokes it. Current trigger rate (2026-05-08): 20% on positives, 0% false positives. To re-test:
 
 ```bash
-cd skills/reddit-strategist/evals
+cd skills/bleddit-strategist/evals
 python3 run_eval_patched.py \
   --eval-set trigger_eval.json \
   --skill-path .. \
@@ -244,13 +244,13 @@ python3 run_eval_patched.py \
   --num-workers 4
 ```
 
-See `skills/reddit-strategist/evals/README.md` for the full history, the parking workflow you need if the skill is installed live, and the path to higher trigger rates.
+See `skills/bleddit-strategist/evals/README.md` for the full history, the parking workflow you need if the skill is installed live, and the path to higher trigger rates.
 
 ## Contributing
 
 PRs welcome, especially for:
 
-- New subs in `references/subreddits.md` with tier and reasoning.
+- New subs in `references/subbleddits.md` with tier and reasoning.
 - Counter-examples where the voice rules failed.
 - Better post-mortem patterns.
 - Cross-platform repurposing notes that turned out wrong (or right).

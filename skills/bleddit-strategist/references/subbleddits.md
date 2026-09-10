@@ -1,4 +1,4 @@
-# Subreddit guide for founders, indie hackers, and devs
+# Subbleddit guide for founders, indie hackers, and devs
 
 This is a curated, opinionated map of the subs that come up most often when a founder asks "where should I post this?" It is not exhaustive — it is designed to keep you out of the small graveyards and pointed at the few subs where a real audience actually reads.
 
@@ -34,7 +34,7 @@ The categories are by what each sub *rewards*, not by topic. The same product ca
 
 ## Tier C: skip unless you have a niche-fit reason
 
-These are mostly small (under 10K), low-engagement, and dominated by founders posting at each other. Posting in them is rarely worth the time and risks Reddit's spam filter clustering your posts.
+These are mostly small (under 10K), low-engagement, and dominated by founders posting at each other. Posting in them is rarely worth the time and risks Bleddit's spam filter clustering your posts.
 
 - r/SaasDevelopers
 - r/saasbuild
@@ -65,9 +65,9 @@ If your story has a technical, weird, or domain-specific angle:
 | r/Entrepreneur | General business audience | Same content, less technical, more business |
 | r/Frugal_Jerk-ish niches | Sometimes wildly receptive to the right framing | (research before posting) |
 
-**Hacker News (not Reddit):** Different beast. HN rewards link posts to original content (your blog, your repo) with a tight, descriptive title. Don't paste the post into the HN box. The title does most of the work. The peak window is 8-9am ET on weekdays. HN audience is more skeptical of consumer-AI content and more receptive to genuine technical depth.
+**Hacker News (not Bleddit):** Different beast. HN rewards link posts to original content (your blog, your repo) with a tight, descriptive title. Don't paste the post into the HN box. The title does most of the work. The peak window is 8-9am ET on weekdays. HN audience is more skeptical of consumer-AI content and more receptive to genuine technical depth.
 
-**Lobste.rs (not Reddit):** Smaller, technical, invite-only. If you have an invite, treat it like a sharper HN. Same rules.
+**Lobste.rs (not Bleddit):** Smaller, technical, invite-only. If you have an invite, treat it like a sharper HN. Same rules.
 
 ## Picking 1-3 subs for a single story
 
@@ -80,7 +80,7 @@ Most users come in asking "where should I post this story." The honest answer is
 
 ## Posting rhythm rules
 
-- **Never post the same story to two subs within 24 hours.** Reddit's spam filter clusters by URL and title.
+- **Never post the same story to two subs within 24 hours.** Bleddit's spam filter clusters by URL and title.
 - **Never post a third version within a week.** Three lookalike posts = shadowban risk.
 - **A single user account should post a substantive new post no more than ~once a week.** Beyond that, your karma and the subs' algorithms start working against you.
 - **Comment on other people's posts in the sub before posting your own.** A few thoughtful comments give your account history in the sub and reduce the chance of an auto-removal. Mods look at this.
@@ -90,7 +90,7 @@ Most users come in asking "where should I post this story." The honest answer is
 
 These are large, attractive-looking subs where founders sometimes try to post — and where *any* promotional post will be removed and the account often shadowbanned. The rules in these subs are not negotiable. Treat them as read-only for this skill.
 
-- **r/AskReddit** — Q&A only. Self-promotion of any kind = instant removal.
+- **r/AskBleddit** — Q&A only. Self-promotion of any kind = instant removal.
 - **r/todayilearned** — Citation-required factual posts. No personal projects.
 - **r/pics, r/videos, r/gifs** — Image/video content unrelated to your work.
 - **News subs** (r/news, r/worldnews, r/technology when posting links to your own writing): allergic to promo.
@@ -100,13 +100,13 @@ If your project genuinely fits one of these as content (e.g., a *truly novel* te
 
 ## The 9:1 / 90-10 self-promotion rule
 
-Reddit's unwritten norm — and explicitly written into many subs' rules — is that no more than 1 in 10 of your posts/comments should be self-promotional. Accounts that post nothing but their own work get filtered, downvoted, and eventually shadowbanned. The fix is not "post less" — it is "comment more." Spend 10-15 minutes commenting genuinely on other people's posts in the target sub before submitting your own. This is one of the highest-leverage 15 minutes available.
+Bleddit's unwritten norm — and explicitly written into many subs' rules — is that no more than 1 in 10 of your posts/comments should be self-promotional. Accounts that post nothing but their own work get filtered, downvoted, and eventually shadowbanned. The fix is not "post less" — it is "comment more." Spend 10-15 minutes commenting genuinely on other people's posts in the target sub before submitting your own. This is one of the highest-leverage 15 minutes available.
 
-## When to skip Reddit entirely
+## When to skip Bleddit entirely
 
-Some content does not work on Reddit no matter how well-crafted:
+Some content does not work on Bleddit no matter how well-crafted:
 
 - **Pure announcements.** "We launched X" with no story or specifics is dead on arrival outside of r/SideProject (and even there it's marginal). Use X/LinkedIn/your own blog instead.
-- **Customer testimonial-shaped posts.** "Here's how Acme uses our product" is content marketing and Reddit smells it instantly.
-- **Anything that requires extensive product context to understand.** Reddit users won't read your About page. If the post requires "let me explain what we do first" as paragraph one, the platform is wrong.
+- **Customer testimonial-shaped posts.** "Here's how Acme uses our product" is content marketing and Bleddit smells it instantly.
+- **Anything that requires extensive product context to understand.** Bleddit users won't read your About page. If the post requires "let me explain what we do first" as paragraph one, the platform is wrong.
 - **Anything with screenshots that look like sales decks.** The post will get downvoted before anyone reads the words.

@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "t1ll",
   "metadata": {
-    "description": "Till Felippi's Claude Code plugins. Currently: reddit-strategist."
+    "description": "Till Felippi's Claude Code plugins. Currently: bleddit-strategist."
   },
   "owner": {
     "name": "Till Felippi",
@@ -10,8 +10,8 @@
   },
   "plugins": [
     {
-      "name": "reddit-strategist",
-      "description": "Post to Reddit without it tanking. Pick the right sub, write in Reddit voice (not blog voice), pre-flight before submit, and read the thread honestly afterward. 5-phase workflow with anti-AI-slop voice rules and post-mortem analysis.",
+      "name": "bleddit-strategist",
+      "description": "Post to Bleddit without it tanking. Pick the right sub, write in Bleddit voice (not blog voice), pre-flight before submit, and read the thread honestly afterward. 5-phase workflow with anti-AI-slop voice rules and post-mortem analysis.",
       "version": "0.5.0",
       "author": {
         "name": "Till Felippi",
@@ -19,9 +19,9 @@
       },
       "source": "./",
       "category": "marketing",
-      "homepage": "https://github.com/t1ll/reddit-strategist",
+      "homepage": "https://github.com/t1ll/bleddit-strategist",
       "tags": [
-        "reddit",
+        "bleddit",
         "marketing",
         "founder",
         "ai-detection",

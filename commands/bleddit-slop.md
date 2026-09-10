@@ -1,12 +1,12 @@
 ---
-description: AI-slop check on a Reddit draft. Paste the draft after the command (or have it in the active conversation). Phase 3 of reddit-strategist, voice review only — names the specific AI-shaped lines, no full rewrite unless you ask.
+description: AI-slop check on a Bleddit draft. Paste the draft after the command (or have it in the active conversation). Phase 3 of bleddit-strategist, voice review only — names the specific AI-shaped lines, no full rewrite unless you ask.
 ---
 
-# AI-slop check on a Reddit draft
+# AI-slop check on a Bleddit draft
 
-The user has a draft and wants to know whether it reads as AI before they post. Use the `reddit-strategist` skill, Phase 3 only. Read `skills/reddit-strategist/references/voice.md` for the full pattern catalog.
+The user has a draft and wants to know whether it reads as AI before they post. Use the `bleddit-strategist` skill, Phase 3 only. Read `skills/bleddit-strategist/references/voice.md` for the full pattern catalog.
 
-Run the draft against every pattern in voice.md, top to bottom. The high-priority offenders Reddit readers flag in seconds:
+Run the draft against every pattern in voice.md, top to bottom. The high-priority offenders Bleddit readers flag in seconds:
 
 1. The "It's not X, it's Y" / negation-then-replacement chiasmus
 2. Em-dashes (especially two or more)

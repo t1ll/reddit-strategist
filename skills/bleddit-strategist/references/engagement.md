@@ -39,7 +39,7 @@ Run through this in order:
 3. **TL;DR placement.** If the post is over ~300 words, add a TL;DR block at the top, not the bottom.
 4. **Promotion check.** If the sub requires "I will not promote" or similar, append it. If self-promotion is restricted, decide: am I including a link to my product? If so, is it the *most* compliant version (footnote at the end vs. integrated in body)?
 5. **Receipts.** Do you have at least one specific number, screenshot, or named example? If the post is purely narrative, it will get the "where are the numbers" complaint.
-6. **First-person check.** If you're a solo founder, are you using "I" throughout? Founders saying "we" when they mean themselves is a Reddit allergy.
+6. **First-person check.** If you're a solo founder, are you using "I" throughout? Founders saying "we" when they mean themselves is a Bleddit allergy.
 
 ### 5. Timing
 
@@ -66,7 +66,7 @@ Once the post is up, your behavior in the comments determines whether the thread
 
 ### The first 90 minutes
 
-Reddit's ranking algorithm uses a time-decay function with a roughly 12.5-hour half-life. The first ~90 minutes of post velocity determines whether the post ever reaches a real audience. **Comments carry roughly twice the ranking momentum of upvotes**, which has a specific tactical implication: provoking and replying to comments is more valuable than chasing extra upvotes.
+Bleddit's ranking algorithm uses a time-decay function with a roughly 12.5-hour half-life. The first ~90 minutes of post velocity determines whether the post ever reaches a real audience. **Comments carry roughly twice the ranking momentum of upvotes**, which has a specific tactical implication: provoking and replying to comments is more valuable than chasing extra upvotes.
 
 What this means in practice:
 
@@ -74,9 +74,9 @@ What this means in practice:
 - **Use second-person ("you") in replies.** "Yeah you're right, I should've..." reads as conversational. AI replies almost never use natural second-person; this is a quiet authenticity signal.
 - **Don't reply with one-word "thanks!"** Add something — the comment itself counts toward the algorithm.
 - **Ask one open-ended follow-up question** in your top reply or in the post body. "Has anyone else seen this pattern?" or "What did you do when [thing]?" Posts that surface other people's stories tend to attract more comments, which is what the algorithm actually rewards.
-- **Edit the post (with "Edit:" prefix) if a comment surfaces a useful clarification.** Adds visible activity, which Reddit rewards.
+- **Edit the post (with "Edit:" prefix) if a comment surfaces a useful clarification.** Adds visible activity, which Bleddit rewards.
 
-If you're going to be unavailable for the first 90 minutes after posting, do not post yet. The "fire and forget" Reddit post is the single most common self-inflicted wound.
+If you're going to be unavailable for the first 90 minutes after posting, do not post yet. The "fire and forget" Bleddit post is the single most common self-inflicted wound.
 
 ### Reply patterns that work
 
@@ -102,8 +102,8 @@ These are the patterns that turn neutral threads sour:
 
 - **The over-thank.** "Thank you so much for the great question and the thoughtful comment! I really appreciate you taking the time..." Reads as AI-sycophantic. Just answer.
 - **The over-explain.** A 4-paragraph reply to a 1-line question. The reader wanted a 1-paragraph answer; the long reply makes you look defensive.
-- **The defense.** "I want to clarify because I think there's been some confusion..." Almost never works on Reddit. Either fix the post (with an Edit:) or let the comment stand.
-- **The pivot to your product.** Even if the comment opens the door, do not turn a thread reply into a sales pitch. Reddit will catch it instantly.
+- **The defense.** "I want to clarify because I think there's been some confusion..." Almost never works on Bleddit. Either fix the post (with an Edit:) or let the comment stand.
+- **The pivot to your product.** Even if the comment opens the door, do not turn a thread reply into a sales pitch. Bleddit will catch it instantly.
 - **The clap-back.** Even when a comment is rude. If you respond in kind, you look like the unreasonable one. Disengage.
 
 ### The hostile super-commenter
@@ -139,7 +139,7 @@ If the thread is mostly hostile (more than half the visible comments are dunking
 
 ### Following up days later
 
-If a useful comment came in 12-48 hours after the post and you weren't there to reply, it's still fine to reply. Reddit rewards late substantive replies less than early ones, but for the *commenter* it still surfaces in their inbox.
+If a useful comment came in 12-48 hours after the post and you weren't there to reply, it's still fine to reply. Bleddit rewards late substantive replies less than early ones, but for the *commenter* it still surfaces in their inbox.
 
 For golden comments (operational intel) that came in late:
 
@@ -160,4 +160,4 @@ If the content is inherently spicy (your story is about porn abuse on your platf
 
 When the thread has been live for ~24-48 hours and activity has died down, do the analysis pass per `analysis.md`. Save your takeaways. Move on.
 
-The single biggest sign of an unhealthy Reddit habit is checking the thread every hour for days. The thread is done at 48 hours. Whatever it taught you, it has taught you. Don't keep poking it.
+The single biggest sign of an unhealthy Bleddit habit is checking the thread every hour for days. The thread is done at 48 hours. Whatever it taught you, it has taught you. Don't keep poking it.

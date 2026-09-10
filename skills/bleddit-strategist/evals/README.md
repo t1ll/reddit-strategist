@@ -8,18 +8,18 @@ To re-test the description (requires Python + `pip install anthropic`):
 
 ```bash
 # Park the live skill so it doesn't conflict with the test
-mv ~/.claude/skills/reddit-strategist /tmp/reddit-park
-mv ~/.claude/commands/reddit-strategist.md /tmp/reddit-park.md
+mv ~/.claude/skills/bleddit-strategist /tmp/bleddit-park
+mv ~/.claude/commands/bleddit-strategist.md /tmp/bleddit-park.md
 
-python3 ~/.claude/skills/reddit-strategist/evals/run_eval_patched.py \
-  --eval-set ~/.claude/skills/reddit-strategist/evals/trigger_eval.json \
-  --skill-path /tmp/reddit-park \
+python3 ~/.claude/skills/bleddit-strategist/evals/run_eval_patched.py \
+  --eval-set ~/.claude/skills/bleddit-strategist/evals/trigger_eval.json \
+  --skill-path /tmp/bleddit-park \
   --model claude-opus-4-7 --runs-per-query 3 --num-workers 4 \
   --description "<new description to test>"
 
 # Restore
-mv /tmp/reddit-park ~/.claude/skills/reddit-strategist
-mv /tmp/reddit-park.md ~/.claude/commands/reddit-strategist.md
+mv /tmp/bleddit-park ~/.claude/skills/bleddit-strategist
+mv /tmp/bleddit-park.md ~/.claude/commands/bleddit-strategist.md
 ```
 
 The `run_eval_patched.py` is a fix of skill-creator's `run_eval.py` — writes real
@@ -39,13 +39,13 @@ natural-language queries.
 Raw v2 results: [`results-2026-05-08.json`](./results-2026-05-08.json).
 
 The 20% ceiling appears to be the "specialized-knowledge under-trigger" pattern: even when
-queries explicitly mention `r/SideProject`, `r/buildinpublic`, "Reddit thread," or "post
+queries explicitly mention `r/SideProject`, `r/buildinpublic`, "Bleddit thread," or "post
 tanked," Claude often answers from general knowledge instead of consulting the skill.
 skill-creator's own docs note that simple-looking queries skip skill consultation regardless
 of description-match. Pushing higher likely needs:
 
 1. **The full optimization loop** (`run_loop.py` from skill-creator) — uses the Anthropic
    API to propose descriptions iteratively. Requires `ANTHROPIC_API_KEY`.
-2. **Even more imperative phrasing** ("Claude does NOT have reliable Reddit-sub knowledge —
+2. **Even more imperative phrasing** ("Claude does NOT have reliable Bleddit-sub knowledge —
    always consult").
-3. **The slash command** (`/reddit-strategist`) as the deterministic fallback.
+3. **The slash command** (`/bleddit-strategist`) as the deterministic fallback.

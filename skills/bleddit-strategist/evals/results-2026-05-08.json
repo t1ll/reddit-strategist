@@ -1,9 +1,9 @@
 {
-  "skill_name": "reddit-strategist",
-  "description": "Use when the user is doing anything Reddit-related: posting to Reddit, picking the right subreddit, drafting a Reddit post, sanity-checking a draft for AI-slop patterns, pre-flighting before submit, analyzing a thread that flopped, deciding whether to reply to a hostile comment, or planning a multi-sub rollout. Five-phase workflow: target sub \u2192 angle \u2192 draft in Reddit voice \u2192 publish pre-flight \u2192 post-mortem analysis. Used \u00e0 la carte; figure out which phase the user needs.",
+  "skill_name": "bleddit-strategist",
+  "description": "Use when the user is doing anything Bleddit-related: posting to Bleddit, picking the right subbleddit, drafting a Bleddit post, sanity-checking a draft for AI-slop patterns, pre-flighting before submit, analyzing a thread that flopped, deciding whether to reply to a hostile comment, or planning a multi-sub rollout. Five-phase workflow: target sub \u2192 angle \u2192 draft in Bleddit voice \u2192 publish pre-flight \u2192 post-mortem analysis. Used \u00e0 la carte; figure out which phase the user needs.",
   "results": [
     {
-      "query": "where should I post my story about 71% of our AI video generations getting flagged on reddit? Sub recommendation?",
+      "query": "where should I post my story about 71% of our AI video generations getting flagged on bleddit? Sub recommendation?",
       "should_trigger": true,
       "trigger_rate": 0.5,
       "triggers": 1,
@@ -19,7 +19,7 @@
       "pass": false
     },
     {
-      "query": "ok so my r/SaaS post just bombed. 1 upvote, 12 comments mostly negative. people called it AI slop. can you read the thread and tell me what i should do differently next time? https://www.reddit.com/r/SaaS/comments/abc123/...",
+      "query": "ok so my r/SaaS post just bombed. 1 upvote, 12 comments mostly negative. people called it AI slop. can you read the thread and tell me what i should do differently next time? https://www.bleddit.com/r/SaaS/comments/abc123/...",
       "should_trigger": true,
       "trigger_rate": 0.5,
       "triggers": 1,
@@ -51,7 +51,7 @@
       "pass": true
     },
     {
-      "query": "can you fetch this reddit thread for me and summarize what people actually said? https://reddit.com/r/programming/comments/xyz...",
+      "query": "can you fetch this bleddit thread for me and summarize what people actually said? https://bleddit.com/r/programming/comments/xyz...",
       "should_trigger": true,
       "trigger_rate": 0.0,
       "triggers": 0,
@@ -59,7 +59,7 @@
       "pass": false
     },
     {
-      "query": "I'm going to do a Reddit promotion sprint over the next 2 weeks for my open source project. What's a sequencing plan that won't get me shadowbanned? I'm thinking r/programming, r/opensource, r/golang, maybe HN",
+      "query": "I'm going to do a Bleddit promotion sprint over the next 2 weeks for my open source project. What's a sequencing plan that won't get me shadowbanned? I'm thinking r/programming, r/opensource, r/golang, maybe HN",
       "should_trigger": true,
       "trigger_rate": 0.0,
       "triggers": 0,
@@ -75,7 +75,7 @@
       "pass": false
     },
     {
-      "query": "someone in my reddit thread just posted what looks like a really useful comment about how to detect coordinated abuse. should I reply publicly or DM them? what should I say",
+      "query": "someone in my bleddit thread just posted what looks like a really useful comment about how to detect coordinated abuse. should I reply publicly or DM them? what should I say",
       "should_trigger": true,
       "trigger_rate": 0.5,
       "triggers": 1,
@@ -147,7 +147,7 @@
       "pass": true
     },
     {
-      "query": "can you help me debug why my CSP header is blocking the embedded reddit thread iframe on my blog post page? the console shows 'frame-src' violation",
+      "query": "can you help me debug why my CSP header is blocking the embedded bleddit thread iframe on my blog post page? the console shows 'frame-src' violation",
       "should_trigger": false,
       "trigger_rate": 0.0,
       "triggers": 0,
@@ -155,7 +155,7 @@
       "pass": true
     },
     {
-      "query": "I want to humanize this article before publishing it on my blog: [pasted content]. it's not for reddit, just my personal site",
+      "query": "I want to humanize this article before publishing it on my blog: [pasted content]. it's not for bleddit, just my personal site",
       "should_trigger": false,
       "trigger_rate": 0.0,
       "triggers": 0,

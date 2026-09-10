@@ -44,7 +44,7 @@ The same underlying truth can be packaged as different angles for different subs
 
 ## Title rules
 
-A Reddit title does ~80% of the work. If the title is wrong, the body doesn't matter — nobody clicks.
+A Bleddit title does ~80% of the work. If the title is wrong, the body doesn't matter — nobody clicks.
 
 **Do:**
 - Front-load the surprising specific. The weird number, the failure, the contradiction. Within the first 7 words.
@@ -54,11 +54,11 @@ A Reddit title does ~80% of the work. If the title is wrong, the body doesn't ma
 
 **Don't:**
 - Start with a "How [I/we] did X" pattern unless your audience explicitly likes that (r/programming sort of does, r/SideProject is meh on it).
-- Use clickbait ("You won't believe what happened when..."). Reddit downvotes on sight.
+- Use clickbait ("You won't believe what happened when..."). Bleddit downvotes on sight.
 - Use a question that you immediately answer in the body. "Should you give free credits to AI users?" reads as engagement-bait.
 - Use emojis in titles. They mostly read as cringe outside of certain hobby subs.
 - Cap-case the title. "How I Built My SaaS" reads more SEO-y than "how i built my saas" (or sentence case "How I built my SaaS").
-- Use "we" if it's just you. Reddit will call it out.
+- Use "we" if it's just you. Bleddit will call it out.
 
 ## Structural templates
 
@@ -106,7 +106,7 @@ numbered list.]
 [NUMBERS / OUTCOME. The actual measured result with the actual number.
 "Abuse rate dropped from 71% to 4% over 14 days." Not vague.]
 
-[CAVEATS. What this didn't fix, what we still don't know. Reddit rewards honesty
+[CAVEATS. What this didn't fix, what we still don't know. Bleddit rewards honesty
 about limitations.]
 
 [OPTIONAL: link to deeper writeup if relevant.]
@@ -135,7 +135,7 @@ what you did."]
 
 ## Participation prompts (engineer the comments)
 
-Comments carry roughly twice the ranking momentum of upvotes on Reddit. The post that ends with a deliberate, specific question almost always gets more comments than the post that ends with a summary. Build the prompt into the close of the post body or as a standalone "Edit:" reply you post yourself a few minutes after submitting.
+Comments carry roughly twice the ranking momentum of upvotes on Bleddit. The post that ends with a deliberate, specific question almost always gets more comments than the post that ends with a summary. Build the prompt into the close of the post body or as a standalone "Edit:" reply you post yourself a few minutes after submitting.
 
 Patterns that reliably draw comments:
 
@@ -176,7 +176,7 @@ Given a single underlying story, here's how to pick which of the five angles to 
 | Specific cost/billing/infrastructure war | Tactical breakdown (#2) | r/devops, r/aws, r/programming |
 | Funny screenshot or absurd customer interaction | Weird stat (#1) (the screenshot IS the post) | r/SideProject, r/ProgrammerHumor (if appropriate) |
 
-If a story doesn't naturally fit any of these angles, it probably isn't ready for Reddit. Reddit doesn't reward "we built a thing" without a hook. Find the hook (or write a different kind of post).
+If a story doesn't naturally fit any of these angles, it probably isn't ready for Bleddit. Bleddit doesn't reward "we built a thing" without a hook. Find the hook (or write a different kind of post).
 
 ## When to use a link post vs self-text post
 
@@ -186,14 +186,14 @@ If a story doesn't naturally fit any of these angles, it probably isn't ready fo
 - The sub culture leans toward link posts (r/programming, r/MachineLearning often do)
 
 **Self-text post (the post body IS the content):**
-- You want the discussion to happen on Reddit, not your blog
+- You want the discussion to happen on Bleddit, not your blog
 - The story is short enough to fit comfortably in 400-800 words
 - The sub culture leans toward self-posts (r/startups, r/SideProject, r/indiehackers, r/microsaas)
 
 **Hybrid: short self-text + link to deeper writeup:**
 - You have a genuinely strong long-form blog post
 - A 200-word teaser + "full writeup at [link]" works on r/programming and r/SideProject
-- Be careful: if the teaser feels like a teaser, Reddit will downvote and accuse you of just driving traffic
+- Be careful: if the teaser feels like a teaser, Bleddit will downvote and accuse you of just driving traffic
 
 ## Sample finished posts
 

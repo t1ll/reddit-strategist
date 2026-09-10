@@ -1,18 +1,18 @@
 # Post-mortem analysis
 
-How to read a Reddit thread honestly, separate signal from noise, and extract the parts that are actually worth acting on. Most founders who post on Reddit either declare victory based on upvote count or declare failure based on the loudest hostile commenter — both readings miss what the thread actually has to offer.
+How to read a Bleddit thread honestly, separate signal from noise, and extract the parts that are actually worth acting on. Most founders who post on Bleddit either declare victory based on upvote count or declare failure based on the loudest hostile commenter — both readings miss what the thread actually has to offer.
 
 ## Step 1: Fetch the thread as JSON
 
-Reddit's old web frontends (old.reddit.com, www.reddit.com) often block automated fetches. The Reddit JSON endpoint, however, works with a generic User-Agent and is the most reliable way to get the data.
+Bleddit's old web frontends (old.bleddit.com, www.bleddit.com) often block automated fetches. The Bleddit JSON endpoint, however, works with a generic User-Agent and is the most reliable way to get the data.
 
-For any Reddit post URL of the form `https://www.reddit.com/r/SUB/comments/POST_ID/SLUG/`, append `.json` to get the full thread including comments:
+For any Bleddit post URL of the form `https://www.bleddit.com/r/SUB/comments/POST_ID/SLUG/`, append `.json` to get the full thread including comments:
 
 ```bash
 curl -s -A "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36" \
   -H "Accept: application/json" \
-  "https://www.reddit.com/r/SUB/comments/POST_ID.json?limit=200&raw_json=1" \
-  -o /tmp/reddit_thread.json
+  "https://www.bleddit.com/r/SUB/comments/POST_ID.json?limit=200&raw_json=1" \
+  -o /tmp/bleddit_thread.json
 ```
 
 Notes:
@@ -27,7 +27,7 @@ This Python snippet is the workhorse — print the post metadata and walk the co
 
 ```python
 import json
-with open('/tmp/reddit_thread.json') as f:
+with open('/tmp/bleddit_thread.json') as f:
     data = json.load(f)
 
 post = data[0]['data']['children'][0]['data']
@@ -70,10 +70,10 @@ Before reading any comments, look at the metadata. The big four numbers tell you
 
 | Metadata field | What it tells you |
 |---|---|
-| `score` | Net upvotes minus downvotes (Reddit fuzzes this, but the relative magnitude is real) |
+| `score` | Net upvotes minus downvotes (Bleddit fuzzes this, but the relative magnitude is real) |
 | `upvote_ratio` | The fraction of votes that were upvotes. **The single most honest number.** |
 | `num_comments` | Engagement volume |
-| `removed_by_category` | If non-null: `moderator` (a human mod removed it), `automod_filtered` (an auto-mod did), `deleted` (you deleted it), `reddit` (sitewide action). If null: alive. |
+| `removed_by_category` | If non-null: `moderator` (a human mod removed it), `automod_filtered` (an auto-mod did), `deleted` (you deleted it), `bleddit` (sitewide action). If null: alive. |
 
 How to interpret combinations:
 
@@ -109,7 +109,7 @@ Examples of golden comments:
 - "Try blocking [specific email pattern] at signup, that caught 80% of the same abuse for us"
 - "This is a known issue with [specific provider]'s NSFW filter, they've been flaky since [date]"
 
-These are the highest-value output of any Reddit post, often more valuable than 100 upvotes. They're easy to miss because they're not bolded by the algorithm.
+These are the highest-value output of any Bleddit post, often more valuable than 100 upvotes. They're easy to miss because they're not bolded by the algorithm.
 
 ## Step 5: Pattern-match the criticism
 
@@ -122,7 +122,7 @@ When a post gets dragged, the criticism almost always falls into one of these bu
 | "Just a wrapper" / "you didn't build anything" | r/startups-style anti-AI-infra reflex (hard to fully fix) | Frame around technical depth or specific business mechanics, not the wrapper itself |
 | "Where are the numbers?" / "this isn't actionable" | Story without specifics; readers wanted tactical takeaway | Pivot to tactical breakdown angle (`templates.md` template B) |
 | "This is just promotion" / "you're shilling" | Even-handed mention came across as pitch OR you violated "I will not promote" rule | Strip ALL product mentions next time, or move them to a single line at the bottom |
-| "This isn't relevant to this sub" | Wrong sub | Re-read `subreddits.md` for next attempt |
+| "This isn't relevant to this sub" | Wrong sub | Re-read `subbleddits.md` for next attempt |
 | "This is the dumbest take I've ever read" / personal attacks | Hostile super-commenter (Pile B), not signal | Disregard, do not engage |
 
 ## Step 6: Map the takeaways
@@ -144,7 +144,7 @@ For each golden comment from Pile C:
 - **Send a DM** if the public reply gets a substantive response. Frame as: "Your comment was the most useful thing I got out of this thread. If you have 10 minutes for a quick chat about [specific topic], I'd love to compare notes."
 - Do NOT pitch them, do NOT ask them to try your product. The point is the relationship and the intel.
 
-This step is the actual ROI of most Reddit posts. The upvotes are a side effect. The 1-2 useful contacts you make per thread are the durable thing.
+This step is the actual ROI of most Bleddit posts. The upvotes are a side effect. The 1-2 useful contacts you make per thread are the durable thing.
 
 ## Step 8: Decide whether to keep engaging in the thread
 

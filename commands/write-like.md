@@ -1,5 +1,5 @@
 ---
-description: Rewrite a draft in a named essayist's voice for cross-platform repurposing (blog, Substack, HN, LinkedIn long-form, X article). Argument is the author — paul-graham, patio11, housel, tim-urban, ben-thompson — or "ask" to be prompted with an opinionated recommendation. Not for native Reddit posts.
+description: Rewrite a draft in a named essayist's voice for cross-platform repurposing (blog, Substack, HN, LinkedIn long-form, X article). Argument is the author — paul-graham, patio11, housel, tim-urban, ben-thompson — or "ask" to be prompted with an opinionated recommendation. Not for native Bleddit posts.
 argument-hint: "<author-name | ask>"
 ---
 
@@ -7,9 +7,9 @@ argument-hint: "<author-name | ask>"
 
 **Requested author (if any):** `$ARGUMENTS`
 
-The user wants to channel a specific essayist's voice. This is **force-invoke for cross-platform repurposing only** — blog, Substack, HN, LinkedIn long-form, X article. Not for native Reddit posts. PG voice on r/SideProject gets called AI slop within ten minutes; the skill refuses and points back at `references/voice.md` if the destination is Reddit.
+The user wants to channel a specific essayist's voice. This is **force-invoke for cross-platform repurposing only** — blog, Substack, HN, LinkedIn long-form, X article. Not for native Bleddit posts. PG voice on r/SideProject gets called AI slop within ten minutes; the skill refuses and points back at `references/voice.md` if the destination is Bleddit.
 
-Use the `reddit-strategist` skill. Load `skills/reddit-strategist/references/voices.md` for the full author profiles, the apply-order, and the de-slop pass checklist.
+Use the `bleddit-strategist` skill. Load `skills/bleddit-strategist/references/voices.md` for the full author profiles, the apply-order, and the de-slop pass checklist.
 
 ## If the user named an author
 
