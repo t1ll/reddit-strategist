@@ -22,15 +22,16 @@ def parse_skill_md(skill_path: Path) -> tuple[str, str, str]:
         raise ValueError("SKILL.md missing frontmatter (no closing ---)")
 
     name = ""
-    description = ""
+    fields: dict[str, str] = {}
     frontmatter_lines = lines[1:end_idx]
     i = 0
     while i < len(frontmatter_lines):
         line = frontmatter_lines[i]
         if line.startswith("name:"):
             name = line[len("name:"):].strip().strip('"').strip("'")
-        elif line.startswith("description:"):
-            value = line[len("description:"):].strip()
+        elif line.startswith("description:") or line.startswith("when_to_use:"):
+            key = line.split(":", 1)[0]
+            value = line[len(key) + 1:].strip()
             # Handle YAML multiline indicators (>, |, >-, |-)
             if value in (">", "|", ">-", "|-"):
                 continuation_lines: list[str] = []
@@ -38,10 +39,12 @@ def parse_skill_md(skill_path: Path) -> tuple[str, str, str]:
                 while i < len(frontmatter_lines) and (frontmatter_lines[i].startswith("  ") or frontmatter_lines[i].startswith("\t")):
                     continuation_lines.append(frontmatter_lines[i].strip())
                     i += 1
-                description = " ".join(continuation_lines)
+                fields[key] = " ".join(continuation_lines)
                 continue
             else:
-                description = value.strip('"').strip("'")
+                fields[key] = value.strip('"').strip("'")
         i += 1
 
+    # Claude Code shows description and when_to_use together, so test them together.
+    description = " ".join(v for v in (fields.get("description", ""), fields.get("when_to_use", "")) if v)
     return name, description, content

@@ -1,197 +1,202 @@
 # Reddit voice
 
-The single biggest reason founder posts get called "AI slop" is that they're written in *blog voice* or *LinkedIn voice* — both of which are exactly the smooth, structured, neutral-positive register that ChatGPT defaults to. Reddit's culture has spent the last two years training itself to spot that register and reject it on sight.
+Founder posts get called "AI slop" mostly because they're written in blog or LinkedIn register: smooth, structured, evenly paced, neutral-positive. That's the register chat models default to, and Reddit readers have learned to spot it, often within the first two lines. The specific tells shift as models change (this file reflects what readers flag as of late 2026); the underlying allergy doesn't.
 
-Reddit voice is not a style. It is a refusal of style. It is the absence of the moves a marketer or content writer would make. This file lists the moves to NOT make, and the moves that signal "real human posting from their phone after work."
+The goal isn't to dodge detection. Readers flag AI text because it's generic: real details smoothed into safe, tidy prose. So the fix lives in the substance (real specifics from the user, an actual opinion, stopping when the point is made) much more than in the surface. Typos, slang and invented hesitations don't help. Fake roughness is its own tell now, and people who use LLMs every day spot it fast.
 
-## The compact rule set
+## Contents
 
-If you only remember a handful of rules:
+- Ground rule: specifics come from the user
+- What Reddit voice sounds like
+- Tells, ranked by how strongly readers react (tier 1, tier 2, tier 3)
+- Over-correcting into fake casual
+- What reads as human
+- The cluster test
+- The one-screen test
+- Length budget
+- When the draft fails
 
-1. **Cut the narrative arc.** No setup → tension → resolution. Reddit posts open with the punchline.
-2. **Cut summary statements.** Replace every "we learned X" with the raw specific that taught you X.
-3. **Use "I" if you are one person, "we" only if you actually have a team. Founders saying "we" when they mean themselves reads as PR fluff.**
-4. **Specifics, always.** Numbers with decimals. Real provider names. Real prompts. Screenshots beat paragraphs.
-5. **Vary length. Some sentences should be three words. Others run on, the way a thought actually goes when you're typing it out at the kitchen table and you keep adding clauses.**
-6. **No em dashes.** Use commas, periods, parentheses, or just two short sentences.
-7. **No rule-of-three.** "Faster, cheaper, better" is the AI fingerprint.
-8. **No bold inline-list headers.** "**Speed:** We made it faster" is the most AI-shaped pattern on the internet.
-9. **Put the TL;DR at the top, not the bottom.** Reddit reads top-down and bails fast.
-10. **Have an actual opinion** — not "this raises questions about X" but "honestly I think X was dumb of me."
+## Ground rule: specifics come from the user
 
-## Patterns to delete on sight
+Specifics are what make a post read as human, which is exactly why it's tempting to make them up. Every number, timestamp, provider name, prompt, quote and anecdote in a draft has to come from the user. If the draft needs one you don't have, ask, or leave a visible placeholder like `[exact $ burned?]` or `[which provider?]` and list the open placeholders under the draft.
 
-These are taken from the humanizer skill but the priorities here are Reddit-specific. The first six are the ones Reddit readers most reliably auto-flag as AI.
+Round numbers are fine if that's what the user knows. Fake precision ("$847.30" from nowhere) is worse than no number: someone always asks for the source, and "made it up" is far worse than "didn't include one."
 
-### 1. Smooth narrative structure
-The story shape "we set out to build X. Then we encountered Y. Then we learned Z. We're now doing W." is the single most AI-shaped move on Reddit. It doesn't matter that you actually wrote it. Reddit has internalized that shape as ChatGPT-shaped.
+The same applies to everything in "What reads as human" below. Edits, named antagonists, time markers and swearing work when they're true and the user's own, never as decoration.
 
-**Fix:** Open with the most surprising specific from the middle. Don't set up. Don't transition. End abruptly.
+## What Reddit voice sounds like
 
-**AI-shaped:**
-> We launched our AI image platform in late 2024. We knew acquisition would be a challenge, so we offered $1 in free credit to every new user. What we didn't expect was that 71% of all video generations would get flagged as pornographic. Here's the story of what we learned.
+A good Reddit post reads like a person typing on their phone after work. They lead with the most interesting thing, say what they think, give details only they would know, and stop. Samples 1 and 2 in `templates.md` are full examples of the target.
 
-**Reddit:**
-> 71% of video generations on my platform got flagged as porn within the first week. I gave every new signup $1 free credit and apparently that's exactly enough budget to attract a very specific category of user.
+1. **Open with the point.** The most surprising specific goes first, not a setup. Reddit reads top-down and bails fast. If a long post doesn't carry its point in the first two lines, a TL;DR at the top helps.
+2. **Raw specifics over summary statements.** Replace "we learned X" with the detail that taught you X.
+3. **"I" for one person, "we" for an actual team.** A solo founder writing "we" reads as PR. If you don't know which the user is, ask.
+4. **Have an opinion.** Not "this raises questions about X" but "I think X was a dumb call on my part."
+5. **Let rhythm follow the thought.** Some sentences are short and some run on because the thought did. Don't manufacture fragments to hit a quota; a run of three-word sentences is a tell too.
+6. **Format like a post, not a doc.** Paragraphs. A plain list only when the content really is a list.
+7. **End when you're done.** The last line is a specific or a real question, not a summary.
 
-### 2. Rule of three
-Three is the AI rhythm. Two or four is human.
+## Tells, ranked by how strongly readers react
 
-**AI-shaped:** "It was faster, cheaper, and easier to scale."
-**Reddit:** "It was faster. Also cheaper. Also we accidentally broke our payment provider."
+The ranking is a judgment from watching threads, not a measurement. Every item is a signal: a human post with one or two of them is normal, and what gets a post flagged is a cluster (see the cluster test). Several examples below come from one founder's free-credit abuse story; it's an illustration, so don't carry its details into other users' posts.
 
-### 3. Bold inline-list headers
-This is so distinctive that some readers literally just downvote and move on the moment they see it.
+### Tier 1: often enough on its own to draw "is this AI?"
 
-**AI-shaped:**
+**Contrastive reframes.** "It's not X, it's Y." "This isn't A — it's B." "Not X, not Y, just Z." "Y rather than X." "The question isn't whether…, it's…" The writer invents a belief nobody held so they can knock it down. It's currently the pattern people quote most often when they call something AI.
+
+Fix: say Y. If someone really does believe X, name who.
+
+- AI-shaped: "This isn't a logging problem. It's an observability problem."
+- Reddit: "Our logs were fine. What burned the week was that nobody could tell which services a request had gone through."
+
+Once in a long essay, aimed at a belief readers actually hold, it's fine (Paul Graham does it; see `voices.md`). Repeated, or in a native Reddit post, it's a tell.
+
+**Hook and closer templates.** Openers like "Here's the thing", "Here's what nobody tells you about X", "I'll be honest:", "Let that sink in." The reveal: "The real lesson / the real reason is…" Closers like "Full stop." and "And that changes everything." Engagement-bait questions tacked on the end: "Curious how others handle this?", "What would you do?", "Thoughts?"
+
+Fix: cut them. If the user wants discussion, ask a narrow question only they could ask: "Anyone else on Replicate seeing the same filter gaps on the fallback path?"
+
+**Bold inline headers and doc formatting.** "**Speed:** We made it faster" is the most recognizable AI formatting habit, and some readers downvote on sight. Same family: markdown section headers in a self-post, Title Case Headers, emoji bullets, bolded key phrases mid-paragraph, curly quotes pasted from a chat window.
+
+AI-shaped:
 > - **Speed:** Generation time dropped 40%.
 > - **Cost:** Cost per request fell to $0.003.
 > - **Reliability:** Failover triggered 0.2% of the time.
 
-**Reddit:**
-> Generation time is down ~40% (don't have the exact number in front of me, somewhere around there). Cost is $0.003/req on average. Failover hit on something like 0.2% of requests, which I was happy with until I realized the fallback path was the one letting porn through.
+Reddit:
+> Generation time is down about 40%. Cost is $0.003/req on average. Failover kicked in on about 0.2% of requests, which I was happy with until I realized the fallback path was the one letting porn through.
 
-### 4. Em dashes
-Reddit em-dash use is real but rare. Two em dashes in one post will get you an "is this AI" comment.
+**The tidy story arc.** "We set out to build X. Then we hit Y. Then we learned Z. Now we're doing W." Setup, tension, resolution, moral: it's the default chat-model story shape, and readers recognize it even when a human wrote it.
 
-**Fix:** Replace with comma, period, or parens. If you'd write "X — and this is the interesting part — Y," just split into two sentences.
+Fix: open with the most surprising specific from the middle, skip the setup and the transitions, stop when the story's told.
 
-### 5. Promotional vocabulary
-Words that flag as marketing copy on Reddit (you'd be amazed how universally these get sniffed out): "vibrant," "robust," "seamless," "powerful," "elegant," "intuitive," "cutting-edge," "leveraging," "harness," "unlock," "empower," "delight," "world-class," "best-in-class," "game-changer," "groundbreaking," "transformative."
+AI-shaped:
+> We launched our AI image platform in late 2024. We knew acquisition would be a challenge, so we offered $1 in free credit to every new user. What we didn't expect was that 71% of all video generations would get flagged as pornographic. Here's the story of what we learned.
 
-If a sentence still works after you delete the adjective, the adjective was promotional.
+Reddit:
+> 71% of video generations on my platform got flagged as porn within the first week. I gave every new signup $1 free credit and apparently that's exactly enough budget to attract a very specific category of user.
 
-### 6. Smooth transitions
-"Furthermore," "Additionally," "Moreover," "What's more," "On top of that," "It's worth noting that," "It's also important to consider..." All AI markers. Reddit prose just goes to the next sentence.
+**Closing summaries and takeaway lists.** "To sum up, the three key takeaways are…" Reddit posts don't have conclusions, and a bolded three-lesson list at the bottom is the worst version. Fix: stop. If a lesson matters, it should already be visible in the body.
 
-**AI-shaped:** "Furthermore, the failover logic was retrying on a different provider. Additionally, that provider had laxer NSFW filters."
-**Reddit:** "The failover was retrying on a different provider. Which had laxer NSFW filters. Yeah."
+**Specifics that look invented.** Suspiciously tidy numbers, quotes that all sound alike, generic names ("a founder named Sarah"), sources nobody can find. Readers ask for receipts. See the ground rule.
 
-### 7. Generic opinions / weasel attribution
-"Some would argue," "Industry observers note," "Many founders find," "It's commonly understood that..." — none of these belong on Reddit. Either you have an opinion or you cite a specific person.
+### Tier 2: strong in combination
 
-**AI-shaped:** "Many founders argue that free trials attract the wrong audience."
-**Reddit:** "I keep seeing this quote from someone on this sub that free trials attract the worst users. They're right."
+**Cosmetic triads.** Three adjectives or three parallel clauses used for cadence: "faster, cheaper, and easier to scale." The tell is the rhythm, not the number three. List as many things as there actually are. Rounding to two or four to dodge it just builds a different formula.
 
-### 8. Sycophantic / customer-service tone
-"Thanks for the great question!" "I appreciate the thoughtful comment!" "That's an excellent point and I want to address it..." — when replying to comments, drop all of this.
+- AI-shaped: "It was faster, cheaper, and easier to scale."
+- Reddit: "It got faster, which I expected. What I didn't expect was breaking our payment provider in the process."
 
-**Fix:** Just answer the comment. "Yeah you're right" is a complete reply.
+**Staccato fragment drama.** Runs of very short sentences or parallel fragments for effect ("No funding. No team. Just vibes." / "Engineers build. Managers ship."), and paragraphs that end on a punchy fragment ("Simple enough for X, without the cost of Y."). One short sentence is fine; a pattern of them is a tell.
 
-### 9. Closing summaries / "key takeaways"
-"To sum up, the three key takeaways are..." Reddit posts don't have conclusions. The post ends when you stop typing.
+**Performative sincerity and model-era vocabulary.** "Honestly," "genuinely," "truly," "the honest answer is." Figurative "quietly" ("quietly breaks everything") and "load-bearing." Mannered metaphors dressing up a plain claim. Helper phrasing ("can help you," "is especially helpful") and superlatives ("the most powerful"). The older list (delve, tapestry, landscape, pivotal, underscore, showcase, crucial, align with) mostly marks 2023-25 models. Still worth cutting, but its absence proves nothing.
 
-**Fix:** Just stop. The last sentence should be a specific, not a summary.
+**Promotional vocabulary.** "Seamless," "robust," "powerful," "elegant," "intuitive," "cutting-edge," "leverage," "harness," "unlock," "empower," "delight," "world-class," "best-in-class," "game-changer," "groundbreaking," "transformative." If the sentence still works with the adjective deleted, it was promotional.
 
-### 10. Hedging about the post itself
-"Hopefully this is helpful." "Apologies for the long post." "Maybe this is the wrong sub." Strip all of it. Reddit reads it as either weasel or AI sycophancy.
+**Sycophantic replies.** "Thanks for the great question!" "That's an excellent point and I want to address it…" In comments, just answer. "Yeah, you're right" is a complete reply.
 
-(One exception: if you literally are in the wrong sub, leading with "probably the wrong sub but" can sometimes disarm. Use sparingly.)
+**Weasel attribution.** "Some would argue," "Many founders find," "It's commonly understood that…" State your own opinion or point to a specific person or thread.
 
-### 11. Hedging phrases (the AI tic)
-Specific hedging constructions are now near-perfect AI fingerprints because LLMs default to them constantly. Cut all of these:
+- AI-shaped: "Many founders argue that free trials attract the wrong audience."
+- Reddit: "Someone on this sub said free trials attract the worst users. For me at least, they were right."
 
-- "it's worth noting that..."
-- "it's important to remember that..."
-- "while this may vary..."
-- "to some extent"
-- "in many cases"
-- "generally speaking"
-- "broadly speaking"
-- "as a general rule"
-- "could potentially..."
-- "may or may not..."
-- "tends to..."
+**Reflexive hedging.** The tell is stacked or didactic hedging ("it's worth noting that," "it's important to remember," "could potentially," "while this may vary," "may or may not"), not ordinary qualifiers. People actually use "usually" and "tends to" more than models do, so one honest qualifier is fine. Replace a generic hedge with a stance, or with uncertainty that names its gap: "I haven't checked whether Fal has the same problem."
 
-Pick a side. If you're not sure, say "I'm not sure but I think..." — Reddit prefers explicit uncertainty over generic hedging.
+**Hedging about the post itself.** "Hopefully this is helpful." "Apologies for the long post." "Maybe this is the wrong sub." It reads as filler. (If the user really isn't sure about the sub, "probably the wrong sub, but" can disarm once.)
 
-### 12. Nominalization (verbs disguised as nouns)
-LLMs over-produce abstract noun phrases where humans use plain verbs. "The implementation of the filter" → "I added the filter." "The optimization of the pipeline" → "I made the pipeline faster." "There was a discussion about pricing" → "We argued about pricing." This is one of the most reliable AI tells; humans almost never write this way casually.
+**Uniform rhythm.** Every paragraph two or three sentences, every sentence 15-20 words, each paragraph built claim, elaboration, wrap-up. Let length follow content: a one-line paragraph where the thought is one line, a long one where it needs room.
 
-Watch for `-tion`, `-ment`, `-ance`, `-ity` suffixes piling up in a sentence. If you see two in a row, rewrite the sentence around verbs.
+**The reused template.** Readers judge the account, not just the post. The same skeleton posted across subs with the nouns swapped, a soft product mention ("X helped me a lot"), and an author who never replies in the comments all read as a marketer or a bot. When the user posts to more than one sub, rewrite for each one.
 
-### 13. Hallucinated specifics
-A specific is only useful if it's real. AI prose often manufactures plausible-sounding details (fake percentages, plausible-sounding fake quotes, fake source names) because the *shape* of a specific helps the prose. On Reddit this gets called out instantly — someone always asks for the source, and "made it up" is worse than "didn't include one." Either cite a real thing or don't make a numbered claim.
+### Tier 3: weak on their own
 
-If you want to gesture at a number you remember vaguely, say so: "somewhere around 80%, don't have the exact figure in front of me." That construction is a strong human signal in itself.
+**Em dashes.** Readers still associate em dashes with ChatGPT, even though current models rarely produce them. One in an otherwise human post isn't a tell. Two or more formulaic ones (spaced, used for a dramatic pause or a reveal) still draw "is this AI" comments. When drafting, prefer a comma, colon, parentheses or a new sentence. When editing the user's own text, leave a deliberate dash alone unless it's part of a cluster. And don't swing the other way into nothing but commas and periods; uniformly plain punctuation is starting to read as machine-made too.
 
-## Patterns to USE (the ones that signal human)
+**Transitions.** "Furthermore," "Additionally," "Moreover," "What's more." Weak alone, but they make prose smoother than Reddit is. Usually the next sentence can just start.
 
-### Specifics that no AI would generate
-- Real timestamps. "Around 2:30am Tuesday" beats "late at night."
-- Real provider names. "Replicate's safety filter" beats "our model provider's content filter."
-- Real prompts you saw. "One user's prompt was literally just 'big titty anime girl beach' typed into the description field" reads as human in a way that "we saw concerning prompts" never will.
-- Real dollar amounts with decimals. "$847.30 burned in the first 4 days" beats "we burned through hundreds of dollars."
-- Self-mockery about a specific bad decision. "Yeah we should've turned off failover for flagged content from day one. We did not."
+- AI-shaped: "Furthermore, the failover logic was retrying on a different provider. Additionally, that provider had laxer NSFW filters."
+- Reddit: "The failover was retrying on a different provider, and that provider had much looser NSFW filters."
 
-### Lowercase opens (occasionally)
-On Reddit, opening with a lowercase fragment ("ok so this is wild") is a recognizable native marker. Use sparingly — every-post is itself a tic.
+**Nominalization.** "The implementation of the filter" for "I added the filter." "There was a discussion about pricing" for "We argued about pricing." Common in AI and corporate prose. When -tion, -ment and -ity nouns start piling up, rewrite around verbs.
 
-### Mid-post asides in parens
-"(don't ask)" "(yes I know)" "(this is dumb)" — Reddit loves parenthetical asides. AI prose almost never produces them. They're cheap human signal.
+**Polish by itself.** Clean grammar, formal words, a neutral tone. These cause most false accusations against human writers. Don't call a draft AI-shaped just because it's tidy.
 
-### "Edit:" additions
-After posting, adding "Edit: clarifying X because a few people asked" reads as native. Build this into the writing flow — even leaving an "edit: yeah I'm an idiot, fixing the typo" is reassuringly human.
+## Over-correcting into fake casual
 
-### Acknowledged uncertainty
-"I think this is right but honestly not sure" is more believable than a confident claim. AI prose is rarely uncertain in this way.
+The newest tells come from drafts trying too hard not to sound like AI. Readers who use LLMs daily recognize the kit, and when you de-slop a draft it's easy to land right in it.
 
-### Profanity (sub-dependent)
-On most dev/founder subs (r/programming, r/SideProject, r/indiehackers, r/SaaS, r/microsaas), one well-placed "fuck" or "shit" reads as native. Don't overdo it. On r/startups it's a coin flip — that sub is more buttoned-up.
+- **Performative lowercase.** A whole post in lowercase from someone who normally writes in sentence case, or "ok so" bolted onto every opener. Match the user's own habits.
+- **Fake candor.** "ngl," "not gonna lie," "I'll be real with you," reflexive "honestly," confessions that exist to sound relatable.
+- **"That's it, that's the post."** And its cousins: "Anyway. Yeah." / "Make of that what you will." Stock closers now.
+- **Forced fragments.** "Which had laxer filters. Yeah." Sounds rough, reads as formula.
+- **Sprinkled slang and swearing.** "lol," "lmao," one dutiful "fuck." Only if the user writes that way.
+- **Canned asides.** "(don't ask)," "(yes I know)," "(this is dumb)" as filler rather than an actual reaction.
+- **Manufactured vagueness.** "Don't have the exact number in front of me" when the user gave you the number.
+- **Pre-written edits and fake typos.** An "Edit: fixing the typo" drafted before the post exists, or deliberate misspellings. Leave both out.
 
-### Specifically named villains
-"I'm pretty sure one Telegram group has an entire workflow built around platforms like ours" reads as human. AI rarely produces this kind of specific antagonist.
+Natural is the goal, not rough. A plain, clean post with real specifics reads more human than a messy one with invented texture.
 
-### Cultural and temporal anchoring
-References to recent events, current dates, or niche cultural knowledge are things LLMs are bad at — their training data is stale, and they avoid time-bound claims. A post that mentions "this happened last Tuesday" or "right after the OpenAI outage" or "during the May Sora hype" reads as freshly-human in a way that's hard to fake. Don't force it, but if your story has temporal markers, keep them in.
+## What reads as human
 
-## The cluster sniff test
+All of this has to come from the user. If they didn't give it to you, ask.
 
-The biggest insight from AI-detection research: no single tell proves a post is AI-written. Plenty of human posts have one or two AI-shaped patterns. What flags a post as slop is *clusters* of patterns. A post with rule-of-three sentences AND bolded inline-list headers AND smooth transitions AND hedging phrases AND no specifics will trip every reader's detector even if a human wrote it.
+- **Real specifics.** "Replicate's safety filter," not "our model provider's content filter." Actual prompts: one user's prompt being literally "big titty anime girl beach" lands in a way "we saw concerning prompts" never will. Real amounts and real times, as precise as the user knows them.
+- **Self-mockery about a specific decision.** "Yeah, we should've turned off failover for flagged content from day one. We did not."
+- **Real uncertainty, stated once.** "I think this is right, but I haven't checked whether Fal has the same gap" beats a confident claim.
+- **Asides that carry something.** A parenthetical with real information or a real reaction is fine. A canned one isn't (see above).
+- **Named antagonists, if they're real.** "Pretty sure one Telegram group has a whole workflow built around platforms like ours," if the user can stand behind it.
+- **Time markers the user gave you.** "The day after the outage" beats "recently." Keep them; don't invent them.
+- **Swearing, if the user swears.** On most dev and founder subs (r/SideProject, r/indiehackers, r/SaaS, r/microsaas) one well-placed "fuck" reads fine. r/startups is more buttoned-up. Don't add it as a signal.
+- **Edits after posting.** "Edit: clarifying X since a few people asked" reads native. The user adds it later, about something that actually happened.
 
-Self-check before posting: read your draft and tally how many of these are present:
+## The cluster test
 
-- [ ] Smooth narrative arc (setup → tension → resolution)
-- [ ] Rule-of-three constructions
-- [ ] Bolded inline-list headers
-- [ ] Em dashes
-- [ ] Smooth transitions ("furthermore," "additionally," "moreover")
-- [ ] Hedging phrases ("it's worth noting," "to some extent")
-- [ ] Promotional adjectives ("seamless," "robust," "powerful")
-- [ ] Nominalization piles ("the implementation of the optimization")
-- [ ] No real-numbered specifics
-- [ ] No personal opinion or stance
-- [ ] No emotional tone (neutral-positive only)
-- [ ] Closing summary or "key takeaways"
+No single tell proves anything; readers react to clusters. Check the draft for:
 
-If you check 4 or more, the draft will read as AI even if you typed every word yourself. Rewrite. The fix is rarely fix-the-sentence; it's *throw out the structure*.
+- [ ] Contrastive reframes ("not X, it's Y")
+- [ ] Hook or closer templates, or an engagement-bait closing question
+- [ ] Bold inline headers, markdown headers, title case or emoji formatting
+- [ ] Tidy setup, tension, resolution, moral arc
+- [ ] Closing summary or takeaway list
+- [ ] Cosmetic triads
+- [ ] Staccato fragment runs
+- [ ] "Honestly," "genuinely," "quietly" and other model-era words
+- [ ] Promotional adjectives
+- [ ] Stacked or didactic hedges
+- [ ] Uniform sentence and paragraph length
+- [ ] Fake-casual moves (performative lowercase, fake candor, "that's the post")
+- [ ] Formulaic em dashes (two or more)
+- [ ] No real specifics, no opinion, neutral-positive tone throughout
 
-## Length budget
+Weak alone, so count them only as part of a cluster: a single em dash, transitions, formal words, clean grammar.
+
+How to read the result: one or two hits need a light edit, and deliberate choices the user made can stay. Four or more and the draft will read as AI even if the user typed every word; the structure is usually the problem, so rebuild instead of patching (see the last section). Also flag a draft that trips nothing but reads uniformly smooth with no real specifics, since that's generic in a way the checklist misses.
+
+When reporting, quote the offending lines, most damaging first. The user needs to know which lines to fix, not how many boxes got ticked.
 
 ## The one-screen test
 
-Before posting, do this. Open the draft. Imagine you're scrolling Reddit at 11pm half-paying-attention. Read your post in that mode.
+Picture someone scrolling Reddit at 11pm, half paying attention, and read the post that way.
 
-- If you can stop reading after the first 200 words and have already gotten the point, you're good.
-- If the post requires reading the second paragraph to understand the first, you've buried the lede.
-- If any paragraph reads "balanced" (one sentence stating a thing, one sentence elaborating, one sentence wrapping it up), rewrite it.
-- If the structure is parallel (paragraph 1 is X, paragraph 2 is Y, paragraph 3 is Z, all the same shape), rewrite at least one to be a different shape.
+- If they've got the point within the first screen, good.
+- If the first paragraph only makes sense after the second, the lede is buried.
+- If a paragraph reads "balanced" (statement, elaboration, wrap-up), rewrite it.
+- If every paragraph has the same shape, break at least one.
 
 ## Length budget
 
-This is sub-dependent and there's a per-sub guide in `subreddits.md`, but as a default:
+These are defaults. `subreddits.md` has per-sub notes, and the target sub's top posts from the past month are the best guide.
 
-- **Story-friendly subs** (r/SideProject, r/indiehackers, r/microsaas): 200-500 words self-text. Anything past 600 starts losing readers and gaining "TL;DR??" comments.
-- **Tactical subs** (r/programming, r/devops, r/MachineLearning): can go longer (800-1500) but only if every paragraph delivers a specific. Pad detection is brutal here.
-- **Update subs** (r/buildinpublic, r/scaleinpublic): 100-300 words plus screenshots/numbers. Story-shaped posts get downvoted here.
-- **r/startups**: 250-400 words, tactical. The sub has gotten increasingly hostile to story posts in 2024-2026. They want lessons-with-numbers, not narratives.
-- **HN**: link post + ~150 word optional context. Don't write the post into the HN box.
+- **Story-friendly subs** (r/SideProject, r/indiehackers, r/microsaas): 200-500 words of self-text. Past about 600 you start getting "TL;DR??" comments.
+- **Tactical subs** (r/programming, r/devops, r/MachineLearning): 800-1500 works if every paragraph carries a specific; readers there are quick to call out padding. r/programming treats AI/LLM topics as off-topic unless deeply technical and removes AI-generated content, so check its current AI policy before sending anything AI-adjacent there.
+- **Update subs** (r/buildinpublic, r/scaleinpublic): 100-300 words plus screenshots or numbers. Story-shaped posts do badly here.
+- **r/startups**: 250-400 words, tactical. Regulars there have been visibly impatient with story posts; lessons with numbers do better than narrative.
+- **Hacker News**: usually a link post with the text field empty and the backstory as a top comment. HN's guidelines ban generated and AI-edited text, so anything posted there should be written by the user. Give feedback on their draft rather than writing it. Details in `cross-platform.md`.
 
-## When the draft fails the voice check
+## When the draft fails
 
-If a draft has multiple AI tells:
+If several tells cluster:
 
-1. Don't try to fix sentence-by-sentence. The shape is wrong.
-2. Throw the draft out and start over with this prompt to yourself: *"What's the single most surprising specific I'd tell a friend at the bar about this?"* Open with that. Then write the next thing you'd say. Then the next. Stop when you'd stop in the conversation.
-3. Read it aloud. If any sentence sounds like it could be on a corporate "About" page, kill it.
-4. Show it to one other person. Ask them: "Does this sound like ChatGPT wrote it?" Believe their answer.
+1. Rewriting sentence by sentence rarely works, because the shape is the problem.
+2. Start over from one question: what's the most surprising specific the user would tell a friend about this? Open with that, write the next thing they'd say, and stop where the conversation would stop. Use only material the user gave you.
+3. Read it aloud. Any sentence that could sit on a corporate About page goes.
+4. Suggest the user show it to one other person and ask, "Does this sound like ChatGPT wrote it?" Their answer beats any checklist.

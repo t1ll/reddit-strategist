@@ -8,18 +8,17 @@ To re-test the description (requires Python + `pip install anthropic`):
 
 ```bash
 # Park the live skill so it doesn't conflict with the test
+# (if you installed it as a plugin, disable the plugin instead)
 mv ~/.claude/skills/reddit-strategist /tmp/reddit-park
-mv ~/.claude/commands/reddit-strategist.md /tmp/reddit-park.md
 
 python3 ~/.claude/skills/reddit-strategist/evals/run_eval_patched.py \
   --eval-set ~/.claude/skills/reddit-strategist/evals/trigger_eval.json \
   --skill-path /tmp/reddit-park \
-  --model claude-opus-4-7 --runs-per-query 3 --num-workers 4 \
+  --model claude-opus-5-5 --runs-per-query 3 --num-workers 4 \
   --description "<new description to test>"
 
 # Restore
 mv /tmp/reddit-park ~/.claude/skills/reddit-strategist
-mv /tmp/reddit-park.md ~/.claude/commands/reddit-strategist.md
 ```
 
 The `run_eval_patched.py` is a fix of skill-creator's `run_eval.py` — writes real
@@ -28,7 +27,9 @@ detection actually works. Without this fix, the official script reports 0%
 trigger rate for everything because slash commands don't auto-trigger from
 natural-language queries.
 
-## Latest scores
+## Old scores (May 2026)
+
+All measured with claude-opus-4-7 against older descriptions. The description was rewritten in v0.6.0 and hasn't been re-tested, so these don't describe the current version.
 
 | Date       | Description version              | Positives        | False positives |
 |------------|----------------------------------|------------------|-----------------|
@@ -38,14 +39,4 @@ natural-language queries.
 
 Raw v2 results: [`results-2026-05-08.json`](./results-2026-05-08.json).
 
-The 20% ceiling appears to be the "specialized-knowledge under-trigger" pattern: even when
-queries explicitly mention `r/SideProject`, `r/buildinpublic`, "Reddit thread," or "post
-tanked," Claude often answers from general knowledge instead of consulting the skill.
-skill-creator's own docs note that simple-looking queries skip skill consultation regardless
-of description-match. Pushing higher likely needs:
-
-1. **The full optimization loop** (`run_loop.py` from skill-creator) — uses the Anthropic
-   API to propose descriptions iteratively. Requires `ANTHROPIC_API_KEY`.
-2. **Even more imperative phrasing** ("Claude does NOT have reliable Reddit-sub knowledge —
-   always consult").
-3. **The slash command** (`/reddit-strategist`) as the deterministic fallback.
+Back then the 20% looked like Claude answering Reddit questions from general knowledge instead of consulting the skill, even when a query named a sub. The fallbacks at the time were skill-creator's `run_loop.py` optimization loop (needs `ANTHROPIC_API_KEY`) and invoking the skill directly (`/reddit-strategist:reddit-strategist`, or `/reddit-strategist` for a manual install). The v0.6.0 rewrite dropped the "Claude doesn't reliably know Reddit, always consult" style of phrasing and the keyword dump, since current models follow plain descriptions well and tend to over-trigger on pushy ones.
