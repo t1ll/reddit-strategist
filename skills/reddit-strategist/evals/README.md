@@ -27,6 +27,15 @@ detection actually works. Without this fix, the official script reports 0%
 trigger rate for everything because slash commands don't auto-trigger from
 natural-language queries.
 
+## October 2026 (v0.6.0)
+
+Two runs on 2026-10-12, both with claude-opus-5-5:
+
+- `run_eval_patched.py`, 3 runs per query: 2/30 positives, 0/30 false positives.
+- `claude -p` against the installed plugin (no stub copy), 1 run per query, counting a hit when the `Skill` tool is called with `reddit-strategist`: 10/10 positives, 0/10 false positives.
+
+The gap points at the harness, not the description. The script writes a stub skill named `reddit-strategist-skill-<id>` whose body is just the description, into a scratch project's `.claude/skills/`, and current Claude Code mostly doesn't invoke it. Until that's fixed, the direct `claude -p` check against a real install is the better signal.
+
 ## Old scores (May 2026)
 
 All measured with claude-opus-4-7 against older descriptions. The description was rewritten in v0.6.0 and hasn't been re-tested, so these don't describe the current version.

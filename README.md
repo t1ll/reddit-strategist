@@ -155,21 +155,9 @@ If you symlinked it and your edits don't show up: the `SKILL.md` frontmatter is 
 
 ## Testing the description
 
-The description decides whether Claude picks the skill up on its own. Back in May 2026, with an older and much longer description, it triggered on 4 of 20 should-trigger runs and on none of the should-not-trigger ones (claude-opus-4-7). The description has been rewritten since and I haven't re-run it, so treat that number as history.
+The description decides whether Claude picks the skill up on its own. In October 2026 I ran the 20 queries in `trigger_eval.json` against the installed v0.6.0 plugin with claude-opus-5-5, one run each. All 10 Reddit queries triggered the skill and none of the 10 others did (LinkedIn, X, Hacker News, cold email, a CSP bug with an embedded Reddit iframe, and so on).
 
-To run it yourself:
-
-```bash
-cd skills/reddit-strategist/evals
-python3 run_eval_patched.py \
-  --eval-set trigger_eval.json \
-  --skill-path .. \
-  --model claude-opus-5-5 \
-  --runs-per-query 3 \
-  --num-workers 4
-```
-
-`evals/README.md` has the older results and explains how to park an installed copy so it doesn't skew the test.
+`run_eval_patched.py` is still in `evals/`, but don't trust it right now. On the same day it reported 2 of 30 positive runs. It tests a renamed stub copy of the skill instead of the installed one, and I haven't worked out why the current Claude Code doesn't pick that copy up. `evals/README.md` has the details and the older numbers.
 
 ## Contributing
 
